@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Areas - Linkou CGMH Burn Center</title>
+    <meta name="description" content="Explore the innovative research at Linkou CGMH Burn Center, including AI burn analysis, 3D printing reconstruction technology, customized medical devices, and other cutting-edge medical research.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for research page -->
+    <style>
+        .research-detail-card {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .research-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            background: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .research-image {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .research-highlight {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .publication-item {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        
+        .publication-authors {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-journal {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index-en.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="CGMH Logo">
+                <div class="logo-text">
+                    <span class="main">Linkou CGMH Burn Center</span>
+                    <span class="sub">林口長庚燒燙傷中心</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index-en.html#about">About Us</a></li>
+                    <li><a href="../index-en.html#team">Medical Team</a></li>
+                    <li><a href="../index-en.html#services">Services</a></li>
+                    <li><a href="../index-en.html#research">Research</a></li>
+                    <li><a href="education-en.html">Education</a></li>
+                    <li><a href="news-en.html">News</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index-en.html#contact" class="btn btn-outline">Contact Us</a>
+                <a href="research.html" class="language-switch">中文</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index-en.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Research Areas</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Research Areas</h1>
+                    <p class="section-subtitle">
+                        Combining AI technology with clinical experience to advance burn medicine innovation, providing more precise medical services to patients
+                    </p>
+                </div>
+                
+                <div class="research-highlight">
+                    <h2 style="margin-bottom: 1rem; font-size: 2rem;">Innovative Research Achievements</h2>
+                    <p style="font-size: 1.2rem; opacity: 0.95; margin-bottom: 2rem;">
+                        We are committed to integrating the latest artificial intelligence technology with traditional medicine,<br>
+                        developing multiple breakthrough diagnostic and treatment technologies
+                    </p>
+                    <div class="grid grid-3" style="margin-top: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">15+</div>
+                            <div>International Journal Papers</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">3</div>
+                            <div>Core Research Areas</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">5</div>
+                            <div>Innovative Medical Technologies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Details -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <!-- Research 2: 3D Printing -->
+                <div class="research-detail-card">
+                    <div class="research-meta">
+                        <span class="meta-item"><i class="fas fa-cube"></i> 3D Printing</span>
+                        <span class="meta-item"><i class="fas fa-user-md"></i> Personalized Medicine</span>
+                        <span class="meta-item"><i class="fas fa-award"></i> Applied</span>
+                    </div>
+                    
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">
+                        3D Printed Personalized Nasal Reconstruction Technology
+                    </h2>
+                    
+                    <div class="grid grid-2" style="gap: 3rem; align-items: center;">
+                        <div style="text-align: center; display: flex; align-items: center; justify-content: center;">
+                            <img src="../assets/images/Research/3D_Printing.jpg" alt="3D Printed Personalized Nasal Reconstruction Technology" style="max-width: 100%; max-height: 400px; width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: var(--shadow);">
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Innovation Breakthrough</h3>
+                            <p style="line-height: 1.8; margin-bottom: 2rem;">
+                                For patients with nasal defects or deformities, we combine 3D printing technology with personalized medical design 
+                                to develop precise surgical guidance systems for reconstruction.
+                            </p>
+                            
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Technical Advantages</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Personalized surgical guidance template production
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Improve surgical precision and success rate
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Reduce surgery time and recovery period
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Improve patient appearance and confidence
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--secondary-color); border-radius: 8px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Application Results</h3>
+                        <p style="line-height: 1.8;">
+                            Successfully applied to 50+ patients with a 95% reconstruction success rate, significantly improving patients' quality of life and mental health.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Research 3: Custom Devices -->
+                <div class="research-detail-card">
+                    <div class="research-meta">
+                        <span class="meta-item"><i class="fas fa-hand-scissors"></i> Hand Surgery</span>
+                        <span class="meta-item"><i class="fas fa-cogs"></i> Custom Devices</span>
+                        <span class="meta-item"><i class="fas fa-award"></i> Applied</span>
+                    </div>
+                    
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">
+                        Customized Extensor Mechanism Reconstruction System
+                    </h2>
+                    
+                    <div class="grid grid-2" style="gap: 3rem; align-items: center;">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Research Motivation</h3>
+                            <p style="line-height: 1.8; margin-bottom: 2rem;">
+                                Hand burns or trauma often lead to extensor dysfunction, seriously affecting patients' daily lives. 
+                                Traditional treatment methods have limited effectiveness, so we developed an innovative customized extensor reconstruction system.
+                            </p>
+                            
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Innovation Features</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Personalized device design and manufacturing
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Combining surgery with rehabilitation training programs
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Intelligent monitoring and adjustment system
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div style="text-align: center; display: flex; align-items: center; justify-content: center;">
+                            <img src="../assets/images/Research/extensor.jpg" alt="Customized Extensor Mechanism Reconstruction System" style="max-width: 100%; max-height: 400px; width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: var(--shadow);">
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--secondary-color); border-radius: 8px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Application Results</h3>
+                        <p style="line-height: 1.8;">
+                            Assisted 30+ patients with hand dysfunction to restore extensor function, achieving an 88% functional improvement rate and significantly enhancing daily life independence.
+                        </p>
+                    </div>
+                
+                <!-- Research 4: AI Eyelid Analysis -->
+                <div class="research-detail-card">
+                    <div class="research-meta">
+                        <span class="meta-item"><i class="fas fa-mobile-alt"></i> Smartphone App</span>
+                        <span class="meta-item"><i class="fas fa-brain"></i> Artificial Intelligence</span>
+                        <span class="meta-item"><i class="fas fa-award"></i> Applied</span>
+                    </div>
+                    
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">
+                        Intelligent Eyelid Function Assessment and Prediction System
+                    </h2>
+                    
+                    <div class="grid grid-2" style="gap: 3rem; align-items: center;">
+                        <div style="text-align: center; display: flex; align-items: center; justify-content: center;">
+                            <img src="../assets/images/Research/Upper eyelid.jpg" alt="Intelligent Eyelid Function Assessment and Prediction System" style="max-width: 100%; max-height: 400px; width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: var(--shadow);">
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Innovative Technology</h3>
+                            <p style="line-height: 1.8; margin-bottom: 2rem;">
+                                Combining smartphone photography capabilities with artificial intelligence deep learning algorithms to develop a portable eyelid function assessment system.
+                                Through image analysis technology, accurately predicting post-surgical eyelid functional recovery.
+                            </p>
+                            
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Core Functions</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Precisely predict upper eyelid ptosis degree
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Assess lower eyelid margin retraction degree
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Analyze levator palpebrae muscle function
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Provide personalized surgical recommendations
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--secondary-color); border-radius: 8px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Application Results</h3>
+                        <p style="line-height: 1.8;">
+                            Successfully assisted 200+ patients with eyelid dysfunction in preoperative assessment, achieving 92% prediction accuracy and significantly improving surgical success rates and patient satisfaction.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Research 1: AI Analysis -->
+                <div class="research-detail-card">
+                    <div class="research-meta">
+                        <span class="meta-item"><i class="fas fa-brain"></i> Artificial Intelligence</span>
+                        <span class="meta-item"><i class="fas fa-stethoscope"></i> Clinical Diagnosis</span>
+                        <span class="meta-item"><i class="fas fa-chart-line"></i> In Progress</span>
+                    </div>
+                    
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">
+                        Vision-Driven Intelligent Burn Analysis and Prediction System
+                    </h2>
+                    
+                    <div class="grid grid-2" style="gap: 3rem; align-items: center;">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Research Background</h3>
+                            <p style="line-height: 1.8; margin-bottom: 2rem;">
+                                Traditional burn area and depth assessment relies mainly on physician experience, which can lead to subjective errors. 
+                                To improve diagnostic accuracy and consistency, we have developed an intelligent burn analysis system based on deep learning.
+                            </p>
+                            
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Technical Features</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Automated burn area calculation with over 95% accuracy
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Deep learning model can identify different degrees of burns
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Real-time diagnostic report generation, improving medical efficiency
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    Predict treatment outcomes and recovery timeline
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <div style="background: var(--secondary-color); padding: 2rem; border-radius: 8px; text-align: center;">
+                                <i class="fas fa-laptop-medical" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">System Architecture</h4>
+                                <p style="color: var(--text-light);">
+                                    Integrating image processing, machine learning, and clinical databases,
+                                    providing comprehensive intelligent diagnostic support system
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--secondary-color); border-radius: 8px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Application Results</h3>
+                        <p style="line-height: 1.8;">
+                            This system has demonstrated excellent performance in clinical trials at our center, not only improving diagnostic accuracy 
+                            but also significantly reducing diagnosis time. It is expected to help young physicians quickly build diagnostic capabilities 
+                            and provide strong support for telemedicine.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Related Academic Publications</h2>
+                    <p class="section-subtitle">Recent important research achievements and international journal publications</p>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="publication-title">
+                        Machine learning approach for predicting inhalation injury in patients with burns
+                    </div>
+                    <div class="publication-authors">
+                        Yang SY, Huang CJ, Yen CI, Chang SY, Tsai CH, Lin YT
+                    </div>
+                    <div class="publication-journal">
+                        Burns. 2023;49(7):1592-1601. (IF: 3.2)
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="publication-title">
+                        Alar Crease Creation Suture in Nasal Reconstruction
+                    </div>
+                    <div class="publication-authors">
+                        Yen CI, Huang CJ, Chang CS, Yang JY, Chuang SS
+                    </div>
+                    <div class="publication-journal">
+                        Plastic and Reconstructive Surgery. 2024 Feb 1;153(2):478-481. (IF: 4.2)
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="publication-title">
+                        Stack versus te technique for central slip reconstruction during vascularized toe proximal interphalangeal joint transfer
+                    </div>
+                    <div class="publication-authors">
+                        Peng C, Lee CH, Lin YT, Tsai CH, Yang JY
+                    </div>
+                    <div class="publication-journal">
+                        Plastic and Reconstructive Surgery. 2024;154(3):508e-513e. (IF: 4.2)
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="publication-title">
+                        Risk factors for postoperative adverse airway events in patients with primary oral cancer undergoing reconstruction without prophylactic tracheostomy
+                    </div>
+                    <div class="publication-authors">
+                        Tsai CH, Liu YC, Kao HK, Chang KP, Tsang NM, Huang CJ
+                    </div>
+                    <div class="publication-journal">
+                        Asian Journal of Surgery. 2024 Apr;47(4):1763-1768. (IF: 2.4)
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="../index-en.html#publications" class="btn btn-outline">
+                        <i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i>
+                        Back to Home for More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h2 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;">
+                        Join Our Research Team
+                    </h2>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-light); margin-bottom: 2rem;">
+                        If you are interested in burn medicine research or would like to learn more about our research projects,
+                        please feel free to contact us. We look forward to working with more excellent researchers to advance medical development.
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="../index-en.html#contact" class="btn btn-primary" style="font-size: 1.1rem;">
+                            <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                            Contact Research Team
+                        </a>
+                        <a href="../index-en.html#team" class="btn btn-outline" style="font-size: 1.1rem;">
+                            <i class="fas fa-users" style="margin-right: 0.5rem;"></i>
+                            Meet Our Researchers
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Linkou CGMH Burn Center</h3>
+                    <p>Dedicated to clinical burn care, promoting innovative research and applications, providing the highest quality medical services to patients.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index-en.html#about">About Us</a></li>
+                        <li><a href="../index-en.html#services">Services</a></li>
+                        <li><a href="../index-en.html#research">Research</a></li>
+                        <li><a href="education-en.html">Education</a></li>
+                        <li><a href="news-en.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>Phone: +886-3-328-1200 ext. 2881</li>
+                        <li>Address: No. 5, Fuxing St., Guishan Dist., Taoyuan City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Linkou CGMH Burn Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

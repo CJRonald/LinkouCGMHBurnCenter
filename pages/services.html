@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服務項目 - 林口長庚燒燙傷中心</title>
+    <meta name="description" content="林口長庚燒燙傷中心專業服務項目，包含急性燒燙傷重症照護、慢性疤痕重建、眼鼻整形重建、手外科關節重建等完整醫療服務。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for services page -->
+    <style>
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .service-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .service-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .service-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .service-features li {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-features i {
+            color: var(--accent-color);
+            margin-right: 1rem;
+            width: 20px;
+        }
+        
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .service-specialties {
+            background: var(--secondary-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .specialty-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .specialty-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .specialty-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 1.5rem;
+            width: 60px;
+            text-align: center;
+        }
+        
+        .specialty-content h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .specialty-content p {
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .service-stats {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .stat-item h4 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="長庚醫院 Logo">
+                <div class="logo-text">
+                    <span class="main">林口長庚燒燙傷中心</span>
+                    <span class="sub">Linkou CGMH Burn Center</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about">關於我們</a></li>
+                    <li><a href="../index.html#team">醫療團隊</a></li>
+                    <li><a href="../index.html#services">服務項目</a></li>
+                    <li><a href="../index.html#research">研究領域</a></li>
+                    <li><a href="education.html">衛教資訊</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="services-en.html" class="language-switch">English</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">首頁</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>服務項目</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">專業服務項目</h1>
+                    <p class="section-subtitle">
+                        四大核心服務領域，提供全方位燒燙傷醫療照護
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 1: Acute Burn Care -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h2 class="service-title">急性燒燙傷重症照護</h2>
+                    <p class="service-description">
+                        24小時專責醫療團隊，配備先進加護病房與緊急救治設施，
+                        從現場急救到住院治療，提供即時高品質重症照護服務。
+                    </p>
+                    
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">服務特色</h3>
+                            <ul class="service-features">
+                                <li>
+                                    <i class="fas fa-clock"></i>
+                                    24小時急診接診服務
+                                </li>
+                                <li>
+                                    <i class="fas fa-procedures"></i>
+                                    21床急症加護隔離病房
+                                </li>
+                                <li>
+                                    <i class="fas fa-user-md"></i>
+                                    專業醫護團隊照護
+                                </li>
+                                <li>
+                                    <i class="fas fa-microscope"></i>
+                                    先進傷口評估技術
+                                </li>
+                                <li>
+                                    <i class="fas fa-heart-rate"></i>
+                                    重症監護與生命維持
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-specialties">
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">專科治療</h3>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-fire-extinguisher"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>化學燒傷處理</h4>
+                                    <p>專業化學燒傷急救與中和治療</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>電傷治療</h4>
+                                    <p>高壓電傷與雷擊傷害專業處理</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-snowflake"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>凍傷治療</h4>
+                                    <p>低溫傷害評估與復溫治療</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-stats">
+                        <h3 style="margin-bottom: 1rem;">服務成果</h3>
+                        <div class="stat-grid">
+                            <div class="stat-item">
+                                <h4>95%</h4>
+                                <p>大面積燒傷存活率</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>30min</h4>
+                                <p>平均急診處理時間</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>24/7</h4>
+                                <p>全年無休醫療服務</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 2: Scar Reconstruction -->
+        <section class="section">
+            <div class="container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h2 class="service-title">慢性疤痕重建</h2>
+                    <p class="service-description">
+                        針對燒燙傷後遺症與慢性疤痕，提供個人化重建手術、
+                        雷射治療及復健計畫，協助患者改善外觀與功能。
+                    </p>
+                    
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">治療方式</h3>
+                            <ul class="service-features">
+                                <li>
+                                    <i class="fas fa-cut"></i>
+                                    疤痕切除重建手術
+                                </li>
+                                <li>
+                                    <i class="fas fa-eye-dropper"></i>
+                                    疤痕內注射治療
+                                </li>
+                                <li>
+                                    <i class="fas fa-magic"></i>
+                                    雷射疤痕治療
+                                </li>
+                                <li>
+                                    <i class="fas fa-compress-arrows-alt"></i>
+                                    壓力治療與復健
+                                </li>
+                                <li>
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    皮瓣移植手術
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-specialties">
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">專業技術</h3>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>組織擴張術</h4>
+                                    <p>漸進式組織擴張重建技術</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-dna"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>幹細胞治療</h4>
+                                    <p>自體幹細胞疤痕修復療法</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>分層重建</h4>
+                                    <p>多層次組織重建技術</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 3: Facial Reconstruction -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h2 class="service-title">眼鼻整形重建</h2>
+                    <p class="service-description">
+                        專精於眼部、鼻部等顏面整形重建，結合精密手術技術與美學設計，
+                        協助患者恢復五官功能與自然外觀。
+                    </p>
+                    
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">手術項目</h3>
+                            <ul class="service-features">
+                                <li>
+                                    <i class="fas fa-eye"></i>
+                                    眼瞼重建與功能修復
+                                </li>
+                                <li>
+                                    <i class="fas fa-search"></i>
+                                    鼻部全重建手術
+                                </li>
+                                <li>
+                                    <i class="fas fa-smile"></i>
+                                    唇部重建與美容
+                                </li>
+                                <li>
+                                    <i class="fas fa-head-side-mask"></i>
+                                    顏面輪廓重塑
+                                </li>
+                                <li>
+                                    <i class="fas fa-palette"></i>
+                                    色素沉澱治療
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-specialties">
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">創新技術</h3>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-cube"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>3D列印導引</h4>
+                                    <p>個人化3D列印手術導引模板</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-microscope"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>顯微手術</h4>
+                                    <p>精密顯微血管神經重建</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-laptop-medical"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>數位規劃</h4>
+                                    <p>電腦輔助手術計畫設計</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 4: Hand Surgery -->
+        <section class="section">
+            <div class="container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-paper"></i>
+                    </div>
+                    <h2 class="service-title">手外科關節重建</h2>
+                    <p class="service-description">
+                        針對手部燒燙傷、外傷或關節攣縮，提供顯微手術、
+                        關節重建與功能復健，協助患者恢復手部靈活度。
+                    </p>
+                    
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">治療範圍</h3>
+                            <ul class="service-features">
+                                <li>
+                                    <i class="fas fa-hand-rock"></i>
+                                    手指關節重建
+                                </li>
+                                <li>
+                                    <i class="fas fa-fist-raised"></i>
+                                    攣縮松解術
+                                </li>
+                                <li>
+                                    <i class="fas fa-hand-scissors"></i>
+                                    肌腱修復重建
+                                </li>
+                                <li>
+                                    <i class="fas fa-hand-point-up"></i>
+                                    神經修復手術
+                                </li>
+                                <li>
+                                    <i class="fas fa-hand-lizard"></i>
+                                    功能性重建
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-specialties">
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">專門技術</h3>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>客製伸指裝置</h4>
+                                    <p>個人化伸指功能重建系統</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>足趾移植</h4>
+                                    <p>足趾移植重建手指功能</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">
+                                    <i class="fas fa-running"></i>
+                                </div>
+                                <div class="specialty-content">
+                                    <h4>功能復健</h4>
+                                    <p>術後專業復健治療計畫</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-stats">
+                        <h3 style="margin-bottom: 1rem;">治療成果</h3>
+                        <div class="stat-grid">
+                            <div class="stat-item">
+                                <h4>85%</h4>
+                                <p>手部功能恢復率</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>200+</h4>
+                                <p>年手術案例數</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>15項</h4>
+                                <p>專利技術認證</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">需要專業諮詢？</h2>
+                    <p class="section-subtitle">
+                        歡迎聯繫我們的專業醫療團隊，為您提供個人化的醫療諮詢服務
+                    </p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="../index.html#contact" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem; margin-right: 1rem;">
+                        <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>
+                        立即諮詢
+                    </a>
+                    <a href="team.html" class="btn btn-outline" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                        <i class="fas fa-users" style="margin-right: 0.5rem;"></i>
+                        認識醫療團隊
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>林口長庚燒燙傷中心</h3>
+                    <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速連結</h3>
+                    <ul>
+                        <li><a href="../index.html#about">關於我們</a></li>
+                        <li><a href="../index.html#services">服務項目</a></li>
+                        <li><a href="../index.html#research">研究領域</a></li>
+                        <li><a href="education.html">衛教資訊</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡資訊</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>電話: +886-3-328-1200 ext. 2881</li>
+                        <li>地址: 桃園市龜山區復興街5號</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

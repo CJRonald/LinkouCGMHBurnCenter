@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Education - Linkou CGMH Burn Center</title>
+    <meta name="description" content="Patient education resources from Linkou CGMH Burn Center, including burn first aid, wound care, scar prevention, rehabilitation guidance and professional educational materials.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for education page -->
+    <style>
+        .education-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .education-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .education-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .education-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .education-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .education-steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+        
+        .education-steps li {
+            counter-increment: step-counter;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--secondary-color);
+            border-radius: 8px;
+            position: relative;
+            padding-left: 4rem;
+        }
+        
+        .education-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .tip-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tip-box h4 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .tip-box p {
+            color: #856404;
+            margin: 0;
+        }
+        
+        .warning-box {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .warning-box p {
+            color: #721c24;
+            margin: 0;
+        }
+        
+        .emergency-contact {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .emergency-contact h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .emergency-contact .phone-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .category-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .category-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            background: white;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .category-tab.active,
+        .category-tab:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index-en.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="CGMH Logo">
+                <div class="logo-text">
+                    <span class="main">Linkou CGMH Burn Center</span>
+                    <span class="sub">林口長庚燒燙傷中心</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index-en.html#about">About Us</a></li>
+                    <li><a href="../index-en.html#team">Faculty</a></li>
+                    <li><a href="../index-en.html#services">Services</a></li>
+                    <li><a href="../index-en.html#research">Research</a></li>
+                    <li><a href="education-en.html">Education</a></li>
+                    <li><a href="news-en.html">News</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index-en.html#contact" class="btn btn-outline">Contact Us</a>
+                <a href="education.html" class="language-switch">中文</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index-en.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Patient Education</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Burn Patient Education</h1>
+                    <p class="section-subtitle">
+                        Professional medical team providing accurate burn knowledge to help with prevention and care
+                    </p>
+                </div>
+                
+                <!-- Category Tabs -->
+                <div class="category-tabs">
+                    <a href="#first-aid" class="category-tab active">First Aid</a>
+                    <a href="#wound-care" class="category-tab">Wound Care</a>
+                    <a href="#scar-prevention" class="category-tab">Scar Prevention</a>
+                    <a href="#rehabilitation" class="category-tab">Rehabilitation</a>
+                    <a href="#prevention" class="category-tab">Prevention</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="emergency-contact">
+                    <h3><i class="fas fa-phone-alt"></i> Emergency Contact</h3>
+                    <p>Emergency Burn Hotline</p>
+                    <div class="phone-number">119</div>
+                    <p>Linkou CGMH Burn Center 24-Hour Consultation Hotline</p>
+                    <div class="phone-number" style="font-size: 1.5rem;">+886-3-328-1200 ext. 2881</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- First Aid -->
+        <section id="first-aid" class="section">
+            <div class="container">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h2 class="education-title">Burn First Aid - Five Steps: Cool, Remove, Soak, Cover, Seek</h2>
+                    <p class="education-description">
+                        Proper first aid treatment for burn accidents can reduce injury severity and minimize subsequent scar formation
+                    </p>
+                    
+                    <ol class="education-steps">
+                        <li>
+                            <strong>Cool - Rinse with Cool Running Water</strong><br>
+                            Rinse the wound with cool running water for 15-30 minutes, water temperature around 15-25°C. If clothing sticks to skin, don't forcibly remove it - cool it down with water first.
+                        </li>
+                        <li>
+                            <strong>Remove - Carefully Remove Clothing</strong><br>
+                            Carefully remove clothing, watches, rings from the injured area while in water to prevent difficulty removing after tissue swelling. If clothing sticks to wound, use scissors to cut it off without tearing.
+                        </li>
+                        <li>
+                            <strong>Soak - Continue Soaking in Cool Water</strong><br>
+                            Continue soaking the injured area in cool water for 10-30 minutes, or until pain relief is felt. Be careful water temperature is not too low to avoid frostbite.
+                        </li>
+                        <li>
+                            <strong>Cover - Cover with Clean Gauze</strong><br>
+                            Gently cover the wound with clean gauze or towel to prevent infection. Avoid using cotton or fibrous materials that may stick to the wound.
+                        </li>
+                        <li>
+                            <strong>Seek - Seek Medical Attention Immediately</strong><br>
+                            Transport the patient to a hospital with burn specialists as soon as possible. Keep wound clean during transport and maintain body temperature.
+                        </li>
+                    </ol>
+                    
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Important Reminder</h4>
+                        <p>Do not use folk remedies like toothpaste, soy sauce, or egg white. These substances may cause infection or impede heat dissipation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wound Care -->
+        <section id="wound-care" class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-band-aid"></i>
+                        </div>
+                        <h2 class="education-title">Wound Care Guidance</h2>
+                        <p class="education-description">
+                            Proper wound care is key to preventing infection and promoting healing
+                        </p>
+                        
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Daily Care Points</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Change dressings daily, keep wound clean and dry
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Gently clean wound with saline solution
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Apply ointment or dressings as directed by physician
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Avoid wound contact with unclean materials
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Monitor for signs of infection
+                            </li>
+                        </ul>
+                        
+                        <div class="tip-box">
+                            <h4><i class="fas fa-lightbulb"></i> Reminder</h4>
+                            <p>If wound shows signs of infection such as redness, pus, or fever, seek medical attention immediately.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="scar-prevention" class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h2 class="education-title">Scar Prevention & Care</h2>
+                        <p class="education-description">
+                            Early scar prevention can significantly improve post-healing appearance
+                        </p>
+                        
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Prevention Methods</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-sun" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Avoid direct sunlight, use sunscreen
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-compress" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Use compression garments or silicone sheets
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-hand-holding-water" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Regular massage to keep skin soft
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-tint" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Use moisturizing products, prevent skin dryness
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <i class="fas fa-dumbbell" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Continue rehabilitation exercises
+                            </li>
+                        </ul>
+                        
+                        <div class="tip-box">
+                            <h4><i class="fas fa-clock"></i> Timing is Important</h4>
+                            <p>Scar prevention should begin immediately after wound healing and continue for 6-12 months for best results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rehabilitation -->
+        <section id="rehabilitation" class="section">
+            <div class="container">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h2 class="education-title">Rehabilitation Exercise Guidance</h2>
+                    <p class="education-description">
+                        Appropriate rehabilitation exercises help restore joint mobility and prevent contracture formation
+                    </p>
+                    
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Hand Rehabilitation Exercises</h3>
+                            <ol class="education-steps">
+                                <li>
+                                    <strong>Fist Clenching</strong><br>
+                                    Slowly make a fist and open, hold for 5 seconds, repeat 10 times
+                                </li>
+                                <li>
+                                    <strong>Finger Extension</strong><br>
+                                    Spread fingers as wide as possible, hold for 5 seconds, repeat 10 times
+                                </li>
+                                <li>
+                                    <strong>Wrist Movement</strong><br>
+                                    Bend wrist up and down, side to side, 10 times in each direction
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Joint Mobility Exercises</h3>
+                            <ol class="education-steps">
+                                <li>
+                                    <strong>Passive Movement</strong><br>
+                                    Assisted joint movement by others to maintain range of motion
+                                </li>
+                                <li>
+                                    <strong>Active Movement</strong><br>
+                                    Self-directed joint movement to strengthen muscles
+                                </li>
+                                <li>
+                                    <strong>Resistance Training</strong><br>
+                                    Add appropriate resistance training in later recovery phase
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Precautions</h4>
+                        <p>Rehabilitation exercises should be progressive. Stop immediately if pain occurs and consult physician. Recovery varies for each individual - follow medical team recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prevention -->
+        <section id="prevention" class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Burn Prevention Knowledge</h2>
+                    <p class="section-subtitle">Prevention is better than treatment - understand risk factors to avoid accidents</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="education-title">Home Safety</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Set water heater temperature below 50°C
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Use heat-resistant gloves in kitchen
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Regular electrical wire inspection
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Proper chemical storage
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3 class="education-title">Child Protection</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Keep hot water and food away from children
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Use outlet safety covers
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Teach safety knowledge
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Constant adult supervision
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="education-title">Workplace Safety</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Use personal protective equipment
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Follow safety operating procedures
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Regular safety training
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                Emergency response planning
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Resource Downloads</h2>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-file-pdf" style="margin-right: 0.5rem;"></i>
+                            Burn First Aid Manual
+                        </h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">Complete burn first aid treatment guide, suitable for home reference</p>
+                        <a href="#" class="btn btn-outline">Download PDF</a>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-file-pdf" style="margin-right: 0.5rem;"></i>
+                            Rehabilitation Exercise Guide
+                        </h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">Detailed rehabilitation exercise demonstrations to help patients practice at home</p>
+                        <a href="#" class="btn btn-outline">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Linkou CGMH Burn Center</h3>
+                    <p>Dedicated to clinical burn care, promoting innovative research and applications, providing the highest quality medical services to patients.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index-en.html#about">About Us</a></li>
+                        <li><a href="../index-en.html#services">Services</a></li>
+                        <li><a href="../index-en.html#research">Research</a></li>
+                        <li><a href="education-en.html">Education</a></li>
+                        <li><a href="news-en.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>Phone: +886-3-328-1200 ext. 2881</li>
+                        <li>Address: No. 5, Fuxing St., Guishan Dist., Taoyuan City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Linkou CGMH Burn Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 - 林口長庚燒燙傷中心</title>
+    <meta name="description" content="林口長庚燒燙傷中心的發展歷程、設備環境與中心介紹，了解我們的專業團隊與先進設施。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for about page -->
+    <style>
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        /* About Category Navigation */
+        .about-category-tabs {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .about-category-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            background: white;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .about-category-tab.active,
+        .about-category-tab:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .about-section {
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 45%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+            padding-right: 2rem;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 55%;
+            text-align: left;
+            padding-left: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            top: 1rem;
+        }
+        
+        .timeline-item:nth-child(odd)::before {
+            right: -6px;
+        }
+        
+        .timeline-item:nth-child(even)::before {
+            left: -6px;
+        }
+        
+        .timeline-year {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .facility-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .facility-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .facility-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left;
+                padding-left: 3rem;
+                padding-right: 0;
+            }
+            
+            .timeline-item::before {
+                left: 14px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="長庚醫院 Logo">
+                <div class="logo-text">
+                    <span class="main">林口長庚燒燙傷中心</span>
+                    <span class="sub">Linkou CGMH Burn Center</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="../index.html#about">關於我們</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#about">中心介紹</a></li>
+                            <li><a href="#history">發展歷程</a></li>
+                            <li><a href="#facilities">設備環境</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../index.html#team">醫療團隊</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#team">主治醫師</a></li>
+                            <li><a href="team.html">完整團隊</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../index.html#services">服務項目</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#services">核心服務</a></li>
+                            <li><a href="services.html">詳細介紹</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../index.html#research">研究領域</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#research">研究亮點</a></li>
+                            <li><a href="../index.html#publications">學術發表</a></li>
+                            <li><a href="research.html">詳細資訊</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="education.html">衛教資訊</a>
+                    </li>
+                    <li>
+                        <a href="news.html">最新消息</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="about-en.html" class="language-switch">English</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">首頁</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>關於我們</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">關於我們</h1>
+                    <p class="section-subtitle">
+                        深入了解林口長庚燒燙傷中心的發展歷程、專業設備與醫療理念
+                    </p>
+                </div>
+                
+                <!-- About Category Navigation -->
+                <div class="about-category-tabs">
+                    <a href="#introduction" class="about-category-tab active">中心介紹</a>
+                    <a href="#history" class="about-category-tab">發展歷程</a>
+                    <a href="#facilities" class="about-category-tab">設備環境</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <!-- Center Introduction -->
+                <div id="introduction" class="about-section">
+                    <h2 class="section-title">中心介紹</h2>
+                    <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+                        <div>
+                            <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1.5rem;">專業醫療服務</h3>
+                            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light); margin-bottom: 2rem;">
+                                林口長庚燒燙傷中心自1978年創立以來，已成為台灣規模最大、設備最完善的燒燙傷治療中心。本中心由羅慧夫醫師創立，現擁有30床專業病房，包括21床急症加護隔離病房與9床亞急性燒傷病房。
+                            </p>
+                            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light);">
+                                我們配備獨立開刀房2間、水療換藥室、矽沙床及氣墊床等先進設備，每週定期舉辦跨專業團隊討論會，結合醫師、護理師、營養師、物理治療師、職能治療師、呼吸治療師及社工師，提供全方位的醫療照護服務。
+                            </p>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">中心特色</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                        <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                        台灣規模最大燒燙傷中心
+                                    </li>
+                                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                        <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                        24小時專業醫療團隊
+                                    </li>
+                                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                        <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                        跨專業整合照護模式
+                                    </li>
+                                    <li style="padding: 0.5rem 0;">
+                                        <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                        創新AI研究應用
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development History -->
+                <div id="history" class="about-section">
+                    <h2 class="section-title">發展歷程</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">1978</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">中心創立</h4>
+                                <p>由羅慧夫醫師創立林口長庚燒燙傷中心，開啟台灣燒燙傷醫學新紀元。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">1985</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">設備擴充</h4>
+                                <p>增設專業加護病房與水療設備，提升燒燙傷患者照護品質。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">1995</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">團隊整合</h4>
+                                <p>建立跨專業團隊照護模式，整合醫護、復健、營養等專業服務。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2005</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">研究發展</h4>
+                                <p>積極投入燒燙傷相關研究，發表多篇國際期刊論文。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2015</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">技術創新</h4>
+                                <p>引進3D列印技術，應用於個人化重建手術計畫。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">AI應用</h4>
+                                <p>開發AI智慧診斷系統，結合人工智慧提升診斷準確度。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facilities and Equipment -->
+                <div id="facilities" class="about-section">
+                    <h2 class="section-title">設備環境</h2>
+                    <div class="facility-grid">
+                        <div class="facility-item">
+                            <i class="fas fa-hospital facility-icon"></i>
+                            <h3 class="facility-title">專業病房</h3>
+                            <p>30床專業病房，包括21床急症加護隔離病房與9床亞急性燒傷病房，提供不同階段的專業照護。</p>
+                        </div>
+                        <div class="facility-item">
+                            <i class="fas fa-user-md facility-icon"></i>
+                            <h3 class="facility-title">專用手術室</h3>
+                            <p>2間獨立開刀房，配備最先進的手術設備，專門用於燒燙傷手術與重建手術。</p>
+                        </div>
+                        <div class="facility-item">
+                            <i class="fas fa-shower facility-icon"></i>
+                            <h3 class="facility-title">水療設備</h3>
+                            <p>專業水療換藥室，提供溫和有效的傷口清潔與換藥服務，減少患者疼痛。</p>
+                        </div>
+                        <div class="facility-item">
+                            <i class="fas fa-bed facility-icon"></i>
+                            <h3 class="facility-title">特殊床位</h3>
+                            <p>矽沙床及氣墊床等特殊病床，有效預防褥瘡發生，提升患者舒適度。</p>
+                        </div>
+                        <div class="facility-item">
+                            <i class="fas fa-microscope facility-icon"></i>
+                            <h3 class="facility-title">研究設備</h3>
+                            <p>先進的研究實驗室，支援AI診斷系統開發與3D列印技術應用。</p>
+                        </div>
+                        <div class="facility-item">
+                            <i class="fas fa-heartbeat facility-icon"></i>
+                            <h3 class="facility-title">監護系統</h3>
+                            <p>24小時連續監護系統，即時監測患者生命徵象，確保醫療安全。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>林口長庚燒燙傷中心</h3>
+                    <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速連結</h3>
+                    <ul>
+                        <li><a href="../index.html#about">關於我們</a></li>
+                        <li><a href="../index.html#services">服務項目</a></li>
+                        <li><a href="../index.html#research">研究領域</a></li>
+                        <li><a href="education.html">衛教資訊</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡資訊</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>電話: +886-3-328-1200 ext. 2881</li>
+                        <li>地址: 桃園市龜山區復興街5號</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update active tab
+                    document.querySelectorAll('.about-category-tab').forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

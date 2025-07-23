@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>醫療團隊 - 林口長庚燒燙傷中心</title>
+    <meta name="description" content="林口長庚燒燙傷中心專業醫療團隊，由資深醫師領導，提供全方位燒燙傷醫療照護服務。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for team page -->
+    <style>
+        .team-member {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--secondary-color);
+        }
+        
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-title {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .member-specialty {
+            background: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .member-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .team-category {
+            margin-bottom: 4rem;
+        }
+        
+        .category-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .category-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .empty-section {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        /* Team Category Navigation */
+        .team-category-tabs {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .team-category-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            background: white;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .team-category-tab.active,
+        .team-category-tab:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="長庚醫院 Logo">
+                <div class="logo-text">
+                    <span class="main">林口長庚燒燙傷中心</span>
+                    <span class="sub">Linkou CGMH Burn Center</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about">關於我們</a></li>
+                    <li><a href="../index.html#team">醫療團隊</a></li>
+                    <li><a href="../index.html#services">服務項目</a></li>
+                    <li><a href="../index.html#research">研究領域</a></li>
+                    <li><a href="education.html">衛教資訊</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="team-en.html" class="language-switch">English</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">首頁</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>醫療團隊</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">專業醫療團隊</h1>
+                    <p class="section-subtitle">
+                        專業主治醫師團隊，結合豐富臨床經驗與創新研究成果
+                    </p>
+                </div>
+                
+                <!-- Team Category Navigation -->
+                <div class="team-category-tabs">
+                    <a href="#senior-attending" class="team-category-tab active">資深主治醫師</a>
+                    <a href="#attending" class="team-category-tab">主治醫師</a>
+                    <a href="#residents" class="team-category-tab">住院醫師</a>
+                    <a href="#rehabilitation" class="team-category-tab">復健科團隊</a>
+                    <a href="#nursing" class="team-category-tab">護理團隊</a>
+                    <a href="#nutrition" class="team-category-tab">營養師</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Members -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <!-- Senior Attending Physicians -->
+                <div id="senior-attending" class="team-category">
+                    <h2 class="category-title">資深主治醫師</h2>
+                    <div class="grid grid-4">
+                        <div class="team-member">
+                            <img src="../assets/images/team/JYYang.jpg" alt="楊瑞永醫師" class="member-photo">
+                            <h3 class="member-name">楊瑞永 醫師</h3>
+                            <p class="member-title">顧問級主治醫師</p>
+                            <div class="member-specialty">燒燙傷重建</div>
+                            <p class="member-description">
+                                整形外科專家，專精於燒燙傷急性治療與後續重建。擁有超過30年臨床經驗，
+                                致力於疤痕治療與功能重建，是台灣燒燙傷醫學的先驅。
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SSChaung.jpg" alt="莊秀樹醫師" class="member-photo">
+                            <h3 class="member-name">莊秀樹 醫師</h3>
+                            <p class="member-title">顧問級主治醫師</p>
+                            <div class="member-specialty">燒燙傷重建</div>
+                            <p class="member-description">
+                                整形外科專家，專精於燒燙傷急性治療與後續重建。擁有超過30年臨床經驗，
+                                致力於疤痕治療與功能重建，是台灣燒燙傷醫學的先驅。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attending Physicians -->
+                <div id="attending" class="team-category">
+                    <h2 class="category-title">主治醫師</h2>
+                    <div class="grid grid-4">
+                        <div class="team-member">
+                            <img src="../assets/images/team/TYLin.jpg" alt="林有德醫師" class="member-photo">
+                            <h3 class="member-name">林有德 醫師</h3>
+                            <p class="member-title">外科部部長</p>
+                            <div class="member-specialty">手外科</div>
+                            <p class="member-description">
+                                世界手外科權威，致力於手指關節顯微重建，曾擔任台灣多項外科醫學會理事長職務，學術與臨床經歷豐富。
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/CIYen.jpg" alt="顏琤嬑醫師" class="member-photo">
+                            <h3 class="member-name">顏琤嬑 醫師</h3>
+                            <p class="member-title">一般整形外科主任</p>
+                            <div class="member-specialty">顏面重建</div>
+                            <p class="member-description">
+                                急重症燒燙傷專家並專攻困難鼻整形，專長於顏面燒燙傷重建與美容修復。運用3D列印技術進行個人化重建，在鼻部重建領域有創新突破。
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SYChang.jpg" alt="張淑茵醫師" class="member-photo">
+                            <h3 class="member-name">張淑茵 醫師</h3>
+                            <p class="member-title">燙傷中心主任</p>
+                            <div class="member-specialty">傷口照護</div>
+                            <p class="member-description">
+                                專長涵蓋眼整形、微整形、抽脂、狐臭及疤痕治療，並致力於燒燙傷病患的重建與照護，具豐富臨床與教學經驗。
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/CHTsai.jpg" alt="蔡嘉軒醫師" class="member-photo">
+                            <h3 class="member-name">蔡嘉軒 醫師</h3>
+                            <p class="member-title">教育委員</p>
+                            <div class="member-specialty">疤痕重建</div>
+                            <p class="member-description">
+                                專長於疤痕重建手術，尤其在蟹足腫治療領域有重要貢獻，是台灣首位採用新式雞尾酒療法治療蟹足腫的醫師，並致力於燒燙傷及創傷重建，具豐富的臨床與教學經驗。
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SIYang.jpg" alt="楊士毅醫師" class="member-photo">
+                            <h3 class="member-name">楊士毅 醫師</h3>
+                            <p class="member-title">專責主治醫師</p>
+                            <div class="member-specialty">燒燙傷重建</div>
+                            <p class="member-description">
+                                專長於燒燙傷重症照護，結合一般美容整形與雷射手術技術，積極參與皮膚癌及燒燙傷重建手術，具備豐富的臨床與教學經驗。
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SHMao.png" alt="毛士軒醫師" class="member-photo">
+                            <h3 class="member-name">毛士軒 醫師</h3>
+                            <p class="member-title">醫師研究員</p>
+                            <div class="member-specialty">傷口評估</div>
+                            <p class="member-description">
+                                燒燙傷專家，專長於燒燙傷傷口評估與治療計畫擬定。
+                                積極參與臨床研究與學術活動。
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SHKwon.jpg" alt="權秀河醫師" class="member-photo">
+                            <h3 class="member-name">權秀河 醫師</h3>
+                            <p class="member-title">專責主治醫師</p>
+                            <div class="member-specialty">急症處理</div>
+                            <p class="member-description">
+                                急症處理專家，專責急性燒燙傷第一線處理。
+                                在急診與病房照護方面表現優秀。
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/CJHuang.jpg" alt="黃志榕醫師" class="member-photo">
+                            <h3 class="member-name">黃志榕 醫師</h3>
+                            <p class="member-title">專責主治醫師</p>
+                            <div class="member-specialty">AI診斷</div>
+                            <p class="member-description">
+                                AI醫學專家，主導燒燙傷智慧診斷系統開發。
+                                結合醫學專業與AI技術，推動燒燙傷診斷現代化。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Residents -->
+                <div id="residents" class="team-category">
+                    <h2 class="category-title">住院醫師</h2>
+                    <div class="empty-section">
+                        <p>住院醫師資訊準備中...</p>
+                    </div>
+                </div>
+                
+                <!-- Rehabilitation Team -->
+                <div id="rehabilitation" class="team-category">
+                    <h2 class="category-title">復健科團隊</h2>
+                    <div class="empty-section">
+                        <p>復健科團隊資訊準備中...</p>
+                    </div>
+                </div>
+                
+                <!-- Nursing Team -->
+                <div id="nursing" class="team-category">
+                    <h2 class="category-title">護理團隊</h2>
+                    <div class="empty-section">
+                        <p>護理團隊資訊準備中...</p>
+                    </div>
+                </div>
+                
+                <!-- Nutritionist -->
+                <div id="nutrition" class="team-category">
+                    <h2 class="category-title">營養師</h2>
+                    <div class="empty-section">
+                        <p>營養師資訊準備中...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Statistics -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">團隊實力</h2>
+                </div>
+                
+                <div class="grid grid-4">
+                    <div class="card" style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-user-md" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">10+</h3>
+                        <p style="color: var(--text-light);">主治醫師</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-graduation-cap" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">30+</h3>
+                        <p style="color: var(--text-light);">平均執業年數</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-award" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">50+</h3>
+                        <p style="color: var(--text-light);">國際期刊論文</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-heart" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">1000+</h3>
+                        <p style="color: var(--text-light);">年服務患者數</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>林口長庚燒燙傷中心</h3>
+                    <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速連結</h3>
+                    <ul>
+                        <li><a href="../index.html#about">關於我們</a></li>
+                        <li><a href="../index.html#services">服務項目</a></li>
+                        <li><a href="../index.html#research">研究領域</a></li>
+                        <li><a href="education.html">衛教資訊</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡資訊</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>電話: +886-3-328-1200 ext. 2881</li>
+                        <li>地址: 桃園市龜山區復興街5號</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

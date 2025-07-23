@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新消息 - 林口長庚燒燙傷中心</title>
+    <meta name="description" content="林口長庚燒燙傷中心最新消息，包括醫療服務更新、研究成果發表、學術活動、教育訓練等重要資訊。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for news page -->
+    <style>
+        .news-article {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .news-article:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .news-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .news-date {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .news-category {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .news-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .news-excerpt {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .news-read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .news-read-more:hover {
+            color: var(--primary-dark);
+        }
+        
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            background: white;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-tab.active,
+        .filter-tab:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="長庚醫院 Logo">
+                <div class="logo-text">
+                    <span class="main">林口長庚燒燙傷中心</span>
+                    <span class="sub">Linkou CGMH Burn Center</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about">關於我們</a></li>
+                    <li><a href="../index.html#team">醫療團隊</a></li>
+                    <li><a href="../index.html#services">服務項目</a></li>
+                    <li><a href="../index.html#research">研究領域</a></li>
+                    <li><a href="education.html">衛教資訊</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="news-en.html" class="language-switch">English</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">首頁</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>最新消息</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">最新消息</h1>
+                    <p class="section-subtitle">
+                        關注林口長庚燒燙傷中心最新動態
+                    </p>
+                </div>
+                
+                <!-- Filter Tabs -->
+                <div class="filter-tabs">
+                    <a href="#" class="filter-tab active">全部消息</a>
+                    <a href="#" class="filter-tab">醫療服務</a>
+                    <a href="#" class="filter-tab">研究成果</a>
+                    <a href="#" class="filter-tab">學術活動</a>
+                    <a href="#" class="filter-tab">教育訓練</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Articles -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <!-- News Article 1 -->
+                <article class="news-article">
+                    <div class="news-meta">
+                        <span class="news-date">2025年1月15日</span>
+                        <span class="news-category">研究成果</span>
+                    </div>
+                    <h2 class="news-title">
+                        AI燒燙傷診斷系統正式導入臨床應用
+                    </h2>
+                    <p class="news-excerpt">
+                        本中心自主研發的視覺驅動智慧燒燙傷分析預測系統，經過兩年的臨床試驗驗證，診斷準確度達95%以上，
+                        正式導入日常臨床診斷流程。此系統不僅提升診斷效率，更為年輕醫師提供強力的診斷支援，
+                        標誌著燒燙傷醫療進入AI輔助診斷的新時代。
+                    </p>
+                    <a href="#" class="news-read-more">
+                        閱讀完整內容
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- News Article 2 -->
+                <article class="news-article">
+                    <div class="news-meta">
+                        <span class="news-date">2025年1月8日</span>
+                        <span class="news-category">醫療服務</span>
+                    </div>
+                    <h2 class="news-title">
+                        新增3D列印個人化重建服務
+                    </h2>
+                    <p class="news-excerpt">
+                        為提供更精準的個人化醫療服務，本中心正式推出3D列印個人化重建技術，
+                        特別針對鼻部重建手術。透過高精度3D掃描與建模技術，為每位患者量身打造專屬的手術導引模板，
+                        大幅提升手術精準度與成功率，並縮短復原期。
+                    </p>
+                    <a href="#" class="news-read-more">
+                        閱讀完整內容
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- News Article 3 -->
+                <article class="news-article">
+                    <div class="news-meta">
+                        <span class="news-date">2025年1月2日</span>
+                        <span class="news-category">學術活動</span>
+                    </div>
+                    <h2 class="news-title">
+                        2025燒燙傷醫學國際研討會即將召開
+                    </h2>
+                    <p class="news-excerpt">
+                        本中心將於3月15-17日舉辦「2025燒燙傷醫學國際研討會」，邀請國際知名專家學者分享最新研究成果。
+                        會議主題涵蓋AI在燒燙傷診斷的應用、創新重建技術、疤痕治療新方法等。
+                        歡迎相關領域專業人士報名參與，共同推動燒燙傷醫學發展。
+                    </p>
+                    <a href="#" class="news-read-more">
+                        閱讀完整內容
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- News Article 4 -->
+                <article class="news-article">
+                    <div class="news-meta">
+                        <span class="news-date">2024年12月28日</span>
+                        <span class="news-category">教育訓練</span>
+                    </div>
+                    <h2 class="news-title">
+                        燒燙傷急救技能社區推廣計畫啟動
+                    </h2>
+                    <p class="news-excerpt">
+                        為提升社區民眾對燒燙傷急救的認知與技能，本中心啟動「燒燙傷急救技能社區推廣計畫」。
+                        計畫包括免費急救課程、教材發放、線上教學影片等，預計一年內覆蓋桃園地區50個社區，
+                        培訓超過5000名民眾掌握基本燒燙傷急救技能。
+                    </p>
+                    <a href="#" class="news-read-more">
+                        閱讀完整內容
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- News Article 5 -->
+                <article class="news-article">
+                    <div class="news-meta">
+                        <span class="news-date">2024年12月20日</span>
+                        <span class="news-category">研究成果</span>
+                    </div>
+                    <h2 class="news-title">
+                        客製化伸指重建技術獲國際專利認證
+                    </h2>
+                    <p class="news-excerpt">
+                        本中心研發的「客製化伸指機轉重建系統」獲得美國、歐盟及日本專利認證。
+                        此創新技術結合精密機械設計與生物力學分析，為手部功能障礙患者提供個人化治療方案。
+                        目前已有15位患者接受治療，手部功能恢復率達85%以上。
+                    </p>
+                    <a href="#" class="news-read-more">
+                        閱讀完整內容
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- News Article 6 -->
+                <article class="news-article">
+                    <div class="news-meta">
+                        <span class="news-date">2024年12月15日</span>
+                        <span class="news-category">醫療服務</span>
+                    </div>
+                    <h2 class="news-title">
+                        新增24小時燒燙傷專線諮詢服務
+                    </h2>
+                    <p class="news-excerpt">
+                        為提供更完善的醫療服務，本中心新增24小時燒燙傷專線諮詢服務，由專業護理師提供急救指導、
+                        傷口照護建議、復健諮詢等服務。民眾可透過專線電話獲得即時專業建議，
+                        特別針對輕微燒燙傷的居家照護提供詳細指導。
+                    </p>
+                    <a href="#" class="news-read-more">
+                        閱讀完整內容
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+                
+                <!-- Pagination -->
+                <div style="text-align: center; margin-top: 3rem;">
+                    <div style="display: inline-flex; gap: 0.5rem; align-items: center;">
+                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--primary-color); border-radius: 4px; background: var(--primary-color); color: white; text-decoration: none;">1</a>
+                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">2</a>
+                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">3</a>
+                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>林口長庚燒燙傷中心</h3>
+                    <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速連結</h3>
+                    <ul>
+                        <li><a href="../index.html#about">關於我們</a></li>
+                        <li><a href="../index.html#services">服務項目</a></li>
+                        <li><a href="../index.html#research">研究領域</a></li>
+                        <li><a href="education.html">衛教資訊</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡資訊</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>電話: +886-3-328-1200 ext. 2881</li>
+                        <li>地址: 桃園市龜山區復興街5號</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

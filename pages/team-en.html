@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty - Linkou CGMH Burn Center</title>
+    <meta name="description" content="Professional medical team at Linkou CGMH Burn Center, led by senior physicians, providing comprehensive burn care services.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for team page -->
+    <style>
+        .team-member {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--secondary-color);
+        }
+        
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-title {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .member-specialty {
+            background: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .member-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .team-category {
+            margin-bottom: 4rem;
+        }
+        
+        .category-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .category-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .empty-section {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        /* Team Category Navigation */
+        .team-category-tabs {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .team-category-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            background: white;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .team-category-tab.active,
+        .team-category-tab:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index-en.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="CGMH Logo">
+                <div class="logo-text">
+                    <span class="main">Linkou CGMH Burn Center</span>
+                    <span class="sub">林口長庚燒燙傷中心</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index-en.html#about">About Us</a></li>
+                    <li><a href="../index-en.html#team">Faculty</a></li>
+                    <li><a href="../index-en.html#services">Services</a></li>
+                    <li><a href="../index-en.html#research">Research</a></li>
+                    <li><a href="education-en.html">Education</a></li>
+                    <li><a href="news-en.html">News</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index-en.html#contact" class="btn btn-outline">Contact Us</a>
+                <a href="team.html" class="language-switch">中文</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index-en.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Faculty</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Faculty</h1>
+                    <p class="section-subtitle">
+                        Professional attending physicians combining rich clinical experience with innovative research achievements
+                    </p>
+                </div>
+                
+                <!-- Team Category Navigation -->
+                <div class="team-category-tabs">
+                    <a href="#senior-attending" class="team-category-tab active">Senior Attending Physicians</a>
+                    <a href="#attending" class="team-category-tab">Attending Physicians</a>
+                    <a href="#residents" class="team-category-tab">Residents</a>
+                    <a href="#rehabilitation" class="team-category-tab">Rehabilitation Team</a>
+                    <a href="#nursing" class="team-category-tab">Nursing Team</a>
+                    <a href="#nutrition" class="team-category-tab">Nutritionist</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Members -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <!-- Senior Attending Physicians -->
+                <div id="senior-attending" class="team-category">
+                    <h2 class="category-title">Senior Attending Physicians</h2>
+                    <div class="grid grid-4">
+                        <div class="team-member">
+                            <img src="../assets/images/team/JYYang.jpg" alt="J.Y. Yang, MD" class="member-photo">
+                            <h3 class="member-name">J.Y. Yang, MD</h3>
+                            <p class="member-title">Senior Attending Physician</p>
+                            <div class="member-specialty">Burn Reconstruction</div>
+                            <p class="member-description">
+                                Plastic surgery expert specializing in acute burn treatment and reconstruction. With over 30 years of clinical experience,
+                                dedicated to scar treatment and functional reconstruction, a pioneer in Taiwan's burn medicine.
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SSChaung.jpg" alt="S.S. Chuang, MD" class="member-photo">
+                            <h3 class="member-name">S.S. Chuang, MD</h3>
+                            <p class="member-title">Senior Attending Physician</p>
+                            <div class="member-specialty">Burn Reconstruction</div>
+                            <p class="member-description">
+                                Plastic surgery expert specializing in acute burn treatment and reconstruction. With over 30 years of clinical experience,
+                                dedicated to scar treatment and functional reconstruction, a pioneer in Taiwan's burn medicine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attending Physicians -->
+                <div id="attending" class="team-category">
+                    <h2 class="category-title">Attending Physicians</h2>
+                    <div class="grid grid-4">
+                        <div class="team-member">
+                            <img src="../assets/images/team/TYLin.jpg" alt="Y.T. Lin, MD" class="member-photo">
+                            <h3 class="member-name">Y.T. Lin, MD</h3>
+                            <p class="member-title">Director of Surgery</p>
+                            <div class="member-specialty">Hand Surgery</div>
+                            <p class="member-description">
+                                World-renowned hand surgery expert dedicated to finger joint microsurgical reconstruction. Has served as chairman of multiple surgical medical associations in Taiwan, with rich academic and clinical experience.
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/CIYen.jpg" alt="C.I. Yen, MD" class="member-photo">
+                            <h3 class="member-name">C.I. Yen, MD</h3>
+                            <p class="member-title">Director of General Plastic Surgery</p>
+                            <div class="member-specialty">Facial Reconstruction</div>
+                            <p class="member-description">
+                                A leading specialist in acute and severe burn reconstruction, with expertise in challenging rhinoplasty. Skilled in facial burn reconstruction and aesthetic restoration, she pioneers personalized, computer-assisted 3D‑printed surgical guides, achieving innovative breakthroughs in nasal reconstruction outcomes.
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SYChang.jpg" alt="S.Y. Chang, MD" class="member-photo">
+                            <h3 class="member-name">S.Y. Chang, MD</h3>
+                            <p class="member-title">Director of Burn Center</p>
+                            <div class="member-specialty">Wound Care</div>
+                            <p class="member-description">
+                                Specializes in eyelid surgery, minimally invasive cosmetic procedures, liposuction, hyperhidrosis, and scar treatment, with dedicated efforts in burn reconstruction and patient care, possessing extensive clinical and teaching experience.
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/CHTsai.jpg" alt="C.H. Tsai, MD" class="member-photo">
+                            <h3 class="member-name">C.H. Tsai, MD</h3>
+                            <p class="member-title">Education Committee Member</p>
+                            <div class="member-specialty">Scar Reconstruction</div>
+                            <p class="member-description">
+                                Specializes in scar reconstruction surgery with significant contributions to keloid treatment, being the first in Taiwan to use the novel cocktail therapy for keloids, and dedicated to burn and trauma reconstruction with extensive clinical and teaching experience.
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SIYang.jpg" alt="S.Y. Yang, MD" class="member-photo">
+                            <h3 class="member-name">S.Y. Yang, MD</h3>
+                            <p class="member-title">Attending Physician</p>
+                            <div class="member-specialty">Burn Reconstruction</div>
+                            <p class="member-description">
+                                Specializes in severe burn care, combining expertise in general cosmetic surgery and laser treatments. Actively involved in skin cancer and burn reconstruction surgeries, with extensive clinical and teaching experience.
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SHMao.png" alt="S.H. Mao, MD" class="member-photo">
+                            <h3 class="member-name">S.H. Mao, MD</h3>
+                            <p class="member-title">Physician Researcher</p>
+                            <div class="member-specialty">Wound Assessment</div>
+                            <p class="member-description">
+                                Burn expert specializing in burn wound assessment and treatment planning.
+                                Actively participates in clinical research and academic activities.
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/SHKwon.jpg" alt="S.H. Kwon, MD" class="member-photo">
+                            <h3 class="member-name">S.H. Kwon, MD</h3>
+                            <p class="member-title">Attending Physician</p>
+                            <div class="member-specialty">Emergency Care</div>
+                            <p class="member-description">
+                                Emergency care expert specializing in first-line acute burn treatment.
+                                Excellent performance in emergency and ward care.
+                            </p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="../assets/images/team/CJHuang.jpg" alt="C.J. Huang, MD" class="member-photo">
+                            <h3 class="member-name">C.J. Huang, MD</h3>
+                            <p class="member-title">Attending Physician</p>
+                            <div class="member-specialty">AI Diagnosis</div>
+                            <p class="member-description">
+                                AI medical expert leading the development of intelligent burn diagnosis systems.
+                                Combining medical expertise with AI technology to advance burn diagnosis modernization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Residents -->
+                <div id="residents" class="team-category">
+                    <h2 class="category-title">Residents</h2>
+                    <div class="empty-section">
+                        <p>Resident physician information coming soon...</p>
+                    </div>
+                </div>
+                
+                <!-- Rehabilitation Team -->
+                <div id="rehabilitation" class="team-category">
+                    <h2 class="category-title">Rehabilitation Team</h2>
+                    <div class="empty-section">
+                        <p>Rehabilitation team information coming soon...</p>
+                    </div>
+                </div>
+                
+                <!-- Nursing Team -->
+                <div id="nursing" class="team-category">
+                    <h2 class="category-title">Nursing Team</h2>
+                    <div class="empty-section">
+                        <p>Nursing team information coming soon...</p>
+                    </div>
+                </div>
+                
+                <!-- Nutritionist -->
+                <div id="nutrition" class="team-category">
+                    <h2 class="category-title">Nutritionist</h2>
+                    <div class="empty-section">
+                        <p>Nutritionist information coming soon...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Statistics -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Team Expertise</h2>
+                </div>
+                
+                <div class="grid grid-4">
+                    <div class="card" style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-user-md" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">10+</h3>
+                        <p style="color: var(--text-light);">Attending Physicians</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-graduation-cap" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">30+</h3>
+                        <p style="color: var(--text-light);">Average Years of Practice</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-award" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">50+</h3>
+                        <p style="color: var(--text-light);">International Journal Papers</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-heart" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">1000+</h3>
+                        <p style="color: var(--text-light);">Patients Served Annually</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Linkou CGMH Burn Center</h3>
+                    <p>Dedicated to clinical burn care, promoting innovative research and applications, providing the highest quality medical services to patients.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index-en.html#about">About Us</a></li>
+                        <li><a href="../index-en.html#services">Services</a></li>
+                        <li><a href="../index-en.html#research">Research</a></li>
+                        <li><a href="education-en.html">Education</a></li>
+                        <li><a href="news-en.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>Phone: +886-3-328-1200 ext. 2881</li>
+                        <li>Address: No. 5, Fuxing St., Guishan Dist., Taoyuan City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Linkou CGMH Burn Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

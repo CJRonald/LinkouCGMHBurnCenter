@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>衛教資訊 - 林口長庚燒燙傷中心</title>
+    <meta name="description" content="林口長庚燒燙傷中心衛教資訊，提供燒燙傷急救處理、傷口照護、疤痕預防、復健指導等專業教育資源，協助民眾正確照護。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for education page -->
+    <style>
+        .education-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .education-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .education-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .education-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .education-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .education-steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+        
+        .education-steps li {
+            counter-increment: step-counter;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--secondary-color);
+            border-radius: 8px;
+            position: relative;
+            padding-left: 4rem;
+        }
+        
+        .education-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .tip-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tip-box h4 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .tip-box p {
+            color: #856404;
+            margin: 0;
+        }
+        
+        .warning-box {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .warning-box h4 {
+            color: #721c24;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .warning-box p {
+            color: #721c24;
+            margin: 0;
+        }
+        
+        .emergency-contact {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .emergency-contact h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .emergency-contact .phone-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .category-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .category-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            background: white;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .category-tab.active,
+        .category-tab:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="長庚醫院 Logo">
+                <div class="logo-text">
+                    <span class="main">林口長庚燒燙傷中心</span>
+                    <span class="sub">Linkou CGMH Burn Center</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about">關於我們</a></li>
+                    <li><a href="../index.html#team">醫療團隊</a></li>
+                    <li><a href="../index.html#services">服務項目</a></li>
+                    <li><a href="../index.html#research">研究領域</a></li>
+                    <li><a href="education.html">衛教資訊</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="education-en.html" class="language-switch">English</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">首頁</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>衛教資訊</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">燒燙傷衛教資訊</h1>
+                    <p class="section-subtitle">
+                        專業醫療團隊提供正確燒燙傷知識，協助民眾預防與照護
+                    </p>
+                </div>
+                
+                <!-- Category Tabs -->
+                <div class="category-tabs">
+                    <a href="#first-aid" class="category-tab active">急救處理</a>
+                    <a href="#wound-care" class="category-tab">傷口照護</a>
+                    <a href="#scar-prevention" class="category-tab">疤痕預防</a>
+                    <a href="#rehabilitation" class="category-tab">復健指導</a>
+                    <a href="#prevention" class="category-tab">預防知識</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="emergency-contact">
+                    <h3><i class="fas fa-phone-alt"></i> 緊急聯絡</h3>
+                    <p>燒燙傷急救專線</p>
+                    <div class="phone-number">119</div>
+                    <p>林口長庚燒燙傷中心 24小時諮詢專線</p>
+                    <div class="phone-number" style="font-size: 1.5rem;">03-328-1200 轉 2881</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- First Aid -->
+        <section id="first-aid" class="section">
+            <div class="container">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h2 class="education-title">燒燙傷急救五步驟 - 沖、脱、泡、蓋、送</h2>
+                    <p class="education-description">
+                        遇到燒燙傷事故時，正確的急救處理可以降低傷害程度，減少後續疤痕形成
+                    </p>
+                    
+                    <ol class="education-steps">
+                        <li>
+                            <strong>沖 - 大量清水沖洗</strong><br>
+                            用大量清水沖洗傷口15-30分鐘，水溫約15-25°C。如果衣物黏住皮膚，不要強行撕除，先沖水降溫。
+                        </li>
+                        <li>
+                            <strong>脫 - 小心除去衣物</strong><br>
+                            在水中小心除去傷處的衣物、手錶、戒指等，避免組織腫脹後難以取下。如衣物黏住傷口，用剪刀剪開，不要撕扯。
+                        </li>
+                        <li>
+                            <strong>泡 - 持續浸泡冷水</strong><br>
+                            將傷處持續浸泡在冷水中10-30分鐘，或持續感覺疼痛減輕為止。注意水溫不要太低，避免凍傷。
+                        </li>
+                        <li>
+                            <strong>蓋 - 覆蓋乾淨紗布</strong><br>
+                            用乾淨的紗布或毛巾輕輕覆蓋傷口，避免感染。不要使用棉花或有毛絮的材料，以免沾黏傷口。
+                        </li>
+                        <li>
+                            <strong>送 - 儘速送醫治療</strong><br>
+                            儘速將傷患送到有燒傷專科的醫院接受治療。運送途中保持傷口清潔，注意保溫。
+                        </li>
+                    </ol>
+                    
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> 重要提醒</h4>
+                        <p>不要使用牙膏、醬油、蛋白等民間偏方，這些物質可能導致感染或阻礙散熱。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wound Care -->
+        <section id="wound-care" class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-band-aid"></i>
+                        </div>
+                        <h2 class="education-title">傷口照護指導</h2>
+                        <p class="education-description">
+                            正確的傷口照護是避免感染、促進癒合的關鍵
+                        </p>
+                        
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">日常照護要點</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                每日更換敷料，保持傷口清潔乾燥
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                使用生理食鹽水輕柔清洗傷口
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                按醫師指示使用藥膏或敷料
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                避免傷口接觸不潔物品
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                注意觀察感染徵象
+                            </li>
+                        </ul>
+                        
+                        <div class="tip-box">
+                            <h4><i class="fas fa-lightbulb"></i> 小提醒</h4>
+                            <p>如果傷口出現紅腫、化膿、發燒等感染症狀，應立即回診就醫。</p>
+                        </div>
+                    </div>
+                    
+                    <div id="scar-prevention" class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h2 class="education-title">疤痕預防與照護</h2>
+                        <p class="education-description">
+                            及早開始疤痕預防，可以顯著改善癒合後的外觀
+                        </p>
+                        
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">預防方法</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-sun" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                避免陽光直射，使用防曬乳
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-compress" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                使用彈性壓力衣或矽膠片
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-hand-holding-water" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                定期按摩，保持皮膚柔軟
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <i class="fas fa-tint" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                使用保濕產品，避免皮膚乾燥
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <i class="fas fa-dumbbell" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                持續進行復健運動
+                            </li>
+                        </ul>
+                        
+                        <div class="tip-box">
+                            <h4><i class="fas fa-clock"></i> 時間很重要</h4>
+                            <p>疤痕預防應在傷口癒合後立即開始，持續6-12個月效果最佳。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rehabilitation -->
+        <section id="rehabilitation" class="section">
+            <div class="container">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h2 class="education-title">復健運動指導</h2>
+                    <p class="education-description">
+                        適當的復健運動有助於恢復關節活動度，預防攣縮形成
+                    </p>
+                    
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">手部復健運動</h3>
+                            <ol class="education-steps">
+                                <li>
+                                    <strong>握拳練習</strong><br>
+                                    緩慢握拳再張開，每次停留5秒，重複10次
+                                </li>
+                                <li>
+                                    <strong>手指伸展</strong><br>
+                                    將手指盡量張開，保持5秒，每次重複10下
+                                </li>
+                                <li>
+                                    <strong>手腕活動</strong><br>
+                                    手腕向上向下彎曲，左右擺動，各方向10次
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">關節活動運動</h3>
+                            <ol class="education-steps">
+                                <li>
+                                    <strong>被動運動</strong><br>
+                                    由他人協助活動關節，維持關節活動度
+                                </li>
+                                <li>
+                                    <strong>主動運動</strong><br>
+                                    自行進行關節活動，增強肌肉力量
+                                </li>
+                                <li>
+                                    <strong>阻力運動</strong><br>
+                                    在康復後期加入適度阻力訓練
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> 注意事項</h4>
+                        <p>復健運動應循序漸進，如感到疼痛應立即停止並諮詢醫師。每個人的復原情況不同，應依照醫療團隊建議進行。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prevention -->
+        <section id="prevention" class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">燒燙傷預防知識</h2>
+                    <p class="section-subtitle">預防勝於治療，了解危險因子避免意外發生</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="education-title">居家安全</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                熱水器溫度設定不超過50°C
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                廚房使用防燙手套
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                電線定期檢查更換
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                化學品妥善存放
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3 class="education-title">兒童保護</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                熱水、熱食遠離兒童
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                電器插座安全蓋
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                教導安全知識
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                成人看護不離身
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="education-title">職場安全</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                使用個人防護設備
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                遵守安全操作規程
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                定期安全教育訓練
+                            </li>
+                            <li style="padding: 0.3rem 0;">
+                                <i class="fas fa-check" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                                緊急應變計畫
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">相關資源下載</h2>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-file-pdf" style="margin-right: 0.5rem;"></i>
+                            燒燙傷急救手冊
+                        </h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">完整的燒燙傷急救處理指南，適合家庭常備</p>
+                        <a href="#" class="btn btn-outline">下載 PDF</a>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-file-pdf" style="margin-right: 0.5rem;"></i>
+                            復健運動圖解
+                        </h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">詳細的復健運動示範，協助患者居家練習</p>
+                        <a href="#" class="btn btn-outline">下載 PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>林口長庚燒燙傷中心</h3>
+                    <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速連結</h3>
+                    <ul>
+                        <li><a href="../index.html#about">關於我們</a></li>
+                        <li><a href="../index.html#services">服務項目</a></li>
+                        <li><a href="../index.html#research">研究領域</a></li>
+                        <li><a href="education.html">衛教資訊</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡資訊</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>電話: +886-3-328-1200 ext. 2881</li>
+                        <li>地址: 桃園市龜山區復興街5號</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

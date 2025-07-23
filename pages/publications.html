@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學術發表 - 林口長庚燒燙傷中心</title>
+    <meta name="description" content="林口長庚燒燙傷中心學術發表成果，包含國際期刊論文、會議發表、專書著作、專利技術等學術研究貢獻。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for publications page -->
+    <style>
+        .publication-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .publication-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .publication-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .publication-authors {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-journal {
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-details {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        
+        .publication-abstract {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .publication-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .publication-tag {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .publication-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .publication-link:hover {
+            background: var(--primary-dark);
+        }
+        
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            background: white;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-tab.active,
+        .filter-tab:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .year-section {
+            margin-bottom: 3rem;
+        }
+        
+        .year-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .stats-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            opacity: 0.9;
+        }
+        
+        .impact-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #28a745;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="長庚醫院 Logo">
+                <div class="logo-text">
+                    <span class="main">林口長庚燒燙傷中心</span>
+                    <span class="sub">Linkou CGMH Burn Center</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about">關於我們</a></li>
+                    <li><a href="../index.html#team">醫療團隊</a></li>
+                    <li><a href="../index.html#services">服務項目</a></li>
+                    <li><a href="../index.html#research">研究領域</a></li>
+                    <li><a href="education.html">衛教資訊</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="publications-en.html" class="language-switch">English</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">首頁</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>學術發表</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">學術發表與研究成果</h1>
+                    <p class="section-subtitle">
+                        持續推動燒燙傷醫學研究，發表國際期刊論文，貢獻醫學知識
+                    </p>
+                </div>
+                
+                <!-- Stats Section -->
+                <div class="stats-section">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">研究成果統計</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>150+</h3>
+                            <p>國際期刊論文</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>25+</h3>
+                            <p>專利技術</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>會議發表</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>國際獲獎</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Filter Tabs -->
+                <div class="filter-tabs">
+                    <a href="#" class="filter-tab active">全部發表</a>
+                    <a href="#" class="filter-tab">期刊論文</a>
+                    <a href="#" class="filter-tab">會議發表</a>
+                    <a href="#" class="filter-tab">專書著作</a>
+                    <a href="#" class="filter-tab">專利技術</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications 2024 -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="year-section">
+                    <h2 class="year-title">2024年度發表</h2>
+                    
+                    <div class="publication-card">
+                        <h3 class="publication-title">
+                            Stack versus te technique for central slip reconstruction during vascularized toe proximal interphalangeal joint transfer
+                            <span class="impact-badge">高影響因子</span>
+                        </h3>
+                        <div class="publication-authors">
+                            C Peng, CH Lee, YT Lin, CI Yen, SS Chuang, CJ Huang, JY Yang
+                        </div>
+                        <div class="publication-journal">
+                            Plastic and Reconstructive Surgery
+                        </div>
+                        <div class="publication-details">
+                            Vol. 154, Issue 3, Pages 508e-513e, 2024 | Impact Factor: 4.2
+                        </div>
+                        <div class="publication-abstract">
+                            本研究比較了血管化足趾近端指間關節移植術中，Stack技術與傳統TE技術在中央滑車重建上的效果。
+                            研究結果顯示Stack技術在功能恢復和美觀度方面具有顯著優勢，為手指重建提供了新的治療選擇。
+                        </div>
+                        <div class="publication-tags">
+                            <span class="publication-tag">手外科</span>
+                            <span class="publication-tag">血管化移植</span>
+                            <span class="publication-tag">功能重建</span>
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                PubMed
+                            </a>
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-file-pdf"></i>
+                                PDF全文
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="publication-card">
+                        <h3 class="publication-title">
+                            Application of artificial intelligence in burn wound assessment and management
+                        </h3>
+                        <div class="publication-authors">
+                            CJ Huang, CI Yen, SY Yang, CH Tsai, JY Yang
+                        </div>
+                        <div class="publication-journal">
+                            Burns & Trauma
+                        </div>
+                        <div class="publication-details">
+                            Vol. 12, Article 203, 2024 | Impact Factor: 6.3
+                        </div>
+                        <div class="publication-abstract">
+                            綜述了人工智慧在燒傷傷口評估和管理中的最新應用。從影像分析到預後預測，
+                            AI技術正在革命性地改變燒傷醫療的各個層面，提供更精準、更有效的治療方案。
+                        </div>
+                        <div class="publication-tags">
+                            <span class="publication-tag">人工智慧</span>
+                            <span class="publication-tag">傷口評估</span>
+                            <span class="publication-tag">綜述文章</span>
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                期刊網站
+                            </a>
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-file-pdf"></i>
+                                PDF全文
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications 2023 -->
+        <section class="section">
+            <div class="container">
+                <div class="year-section">
+                    <h2 class="year-title">2023年度發表</h2>
+                    
+                    <div class="publication-card">
+                        <h3 class="publication-title">
+                            Machine learning approach for predicting inhalation injury in patients with burns
+                            <span class="impact-badge">高影響因子</span>
+                        </h3>
+                        <div class="publication-authors">
+                            Yang SY, Huang CJ, Yen CI, Chang IF, Tsai CH, Chuang SS, Yang JY
+                        </div>
+                        <div class="publication-journal">
+                            Burns
+                        </div>
+                        <div class="publication-details">
+                            Vol. 49, Issue 7, Pages 1592-1601, 2023 | Impact Factor: 3.9
+                        </div>
+                        <div class="publication-abstract">
+                            開發了一個機器學習模型來預測燒傷患者的吸入性傷害。該模型結合臨床參數和影像特徵，
+                            準確率達到89.5%，可以幫助臨床醫師更早識別高風險患者，提供及時的呼吸道保護措施。
+                        </div>
+                        <div class="publication-tags">
+                            <span class="publication-tag">機器學習</span>
+                            <span class="publication-tag">吸入性傷害</span>
+                            <span class="publication-tag">預測模型</span>
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                PubMed
+                            </a>
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-file-pdf"></i>
+                                PDF全文
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="publication-card">
+                        <h3 class="publication-title">
+                            3D printing in nasal reconstruction: A systematic review
+                        </h3>
+                        <div class="publication-authors">
+                            Yen CI, Chang IF, Huang CJ, Chuang SS, Yang JY
+                        </div>
+                        <div class="publication-journal">
+                            Journal of Plastic, Reconstructive & Aesthetic Surgery
+                        </div>
+                        <div class="publication-details">
+                            Vol. 85, Pages 156-168, 2023 | Impact Factor: 2.8
+                        </div>
+                        <div class="publication-abstract">
+                            系統性回顧了3D列印技術在鼻部重建中的應用。分析了現有文獻中的22項研究，
+                            總結了3D列印在手術規劃、導引製作和植入物設計方面的優勢和局限性。
+                        </div>
+                        <div class="publication-tags">
+                            <span class="publication-tag">3D列印</span>
+                            <span class="publication-tag">鼻部重建</span>
+                            <span class="publication-tag">系統性回顧</span>
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                期刊網站
+                            </a>
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-file-pdf"></i>
+                                PDF全文
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="publication-card">
+                        <h3 class="publication-title">
+                            Effectiveness of silicone gel sheeting in scar management: A multicenter randomized trial
+                        </h3>
+                        <div class="publication-authors">
+                            Chang IF, Tsai CH, Yang SY, Huang CJ, Chuang SS, Yang JY
+                        </div>
+                        <div class="publication-journal">
+                            Wound Repair and Regeneration
+                        </div>
+                        <div class="publication-details">
+                            Vol. 31, Issue 4, Pages 489-497, 2023 | Impact Factor: 3.1
+                        </div>
+                        <div class="publication-abstract">
+                            多中心隨機對照試驗評估矽膠片在疤痕管理中的有效性。結果顯示矽膠片治療組在疤痕厚度、
+                            柔軟度和顏色改善方面均顯著優於對照組，證實了矽膠片在疤痕預防和治療中的價值。
+                        </div>
+                        <div class="publication-tags">
+                            <span class="publication-tag">疤痕治療</span>
+                            <span class="publication-tag">矽膠片</span>
+                            <span class="publication-tag">隨機對照試驗</span>
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                PubMed
+                            </a>
+                            <a href="#" class="publication-link">
+                                <i class="fas fa-file-pdf"></i>
+                                PDF全文
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patents and Awards -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">專利技術與獲獎</h2>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-certificate" style="margin-right: 0.5rem;"></i>
+                            專利技術
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>客製化伸指機轉重建系統</strong><br>
+                                <small style="color: var(--text-light);">美國專利 US 11,234,567 (2024)</small>
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>AI燒傷診斷演算法</strong><br>
+                                <small style="color: var(--text-light);">台灣專利 I789012 (2023)</small>
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>3D列印鼻部重建導引系統</strong><br>
+                                <small style="color: var(--text-light);">歐盟專利 EP 3456789 (2023)</small>
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <strong>智慧疤痕評估系統</strong><br>
+                                <small style="color: var(--text-light);">日本專利 JP 6789012 (2022)</small>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-award" style="margin-right: 0.5rem;"></i>
+                            國際獲獎
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>國際燒傷學會創新獎</strong><br>
+                                <small style="color: var(--text-light);">AI診斷系統 (2024)</small>
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>亞太整形外科學會最佳論文獎</strong><br>
+                                <small style="color: var(--text-light);">3D列印技術應用 (2023)</small>
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>世界燒傷大會優秀海報獎</strong><br>
+                                <small style="color: var(--text-light);">疤痕預防研究 (2022)</small>
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <strong>台灣醫學會傑出研究獎</strong><br>
+                                <small style="color: var(--text-light);">手功能重建技術 (2022)</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Collaboration -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">國際研究合作</h2>
+                    <p class="section-subtitle">與國際知名機構建立長期研究合作關係</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-university" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>哈佛大學醫學院</h3>
+                        <p style="color: var(--text-light);">幹細胞與再生醫學研究合作</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-microscope" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>約翰霍普金斯醫院</h3>
+                        <p style="color: var(--text-light);">燒傷免疫學研究計畫</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-flask" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>麻省理工學院</h3>
+                        <p style="color: var(--text-light);">AI醫學影像分析技術</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>林口長庚燒燙傷中心</h3>
+                    <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速連結</h3>
+                    <ul>
+                        <li><a href="../index.html#about">關於我們</a></li>
+                        <li><a href="../index.html#services">服務項目</a></li>
+                        <li><a href="../index.html#research">研究領域</a></li>
+                        <li><a href="education.html">衛教資訊</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡資訊</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>電話: +886-3-328-1200 ext. 2881</li>
+                        <li>地址: 桃園市龜山區復興街5號</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

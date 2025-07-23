@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究領域 - 林口長庚燒燙傷中心</title>
+    <meta name="description" content="探索林口長庚燒燙傷中心的創新研究，包括AI燒燙傷分析、3D列印重建技術、客製化醫療裝置等前瞻性醫學研究。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <!-- Additional styles for research page -->
+    <style>
+        .research-detail-card {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .research-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            background: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .research-image {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .research-highlight {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .publication-item {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        
+        .publication-authors {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-journal {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="長庚醫院 Logo">
+                <div class="logo-text">
+                    <span class="main">林口長庚燒燙傷中心</span>
+                    <span class="sub">Linkou CGMH Burn Center</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about">關於我們</a></li>
+                    <li><a href="../index.html#team">醫療團隊</a></li>
+                    <li><a href="../index.html#services">服務項目</a></li>
+                    <li><a href="../index.html#research">研究領域</a></li>
+                    <li><a href="education.html">衛教資訊</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="research-en.html" class="language-switch">English</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">首頁</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>研究領域</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">研究領域</h1>
+                    <p class="section-subtitle">
+                        結合AI技術與臨床經驗，推動燒燙傷醫學創新發展，為患者提供更精準的醫療服務
+                    </p>
+                </div>
+                
+                <div class="research-highlight">
+                    <h2 style="margin-bottom: 1rem; font-size: 2rem;">創新研究成果</h2>
+                    <p style="font-size: 1.2rem; opacity: 0.95; margin-bottom: 2rem;">
+                        我們致力於將最新的人工智慧技術與傳統醫學結合，<br>
+                        開發出多項突破性的診斷與治療技術
+                    </p>
+                    <div class="grid grid-3" style="margin-top: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">15+</div>
+                            <div>國際期刊論文</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">3</div>
+                            <div>核心研究領域</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">5</div>
+                            <div>創新醫療技術</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Details -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <!-- Research 2: 3D Printing -->
+                <div class="research-detail-card">
+                    <div class="research-meta">
+                        <span class="meta-item"><i class="fas fa-cube"></i> 3D列印</span>
+                        <span class="meta-item"><i class="fas fa-user-md"></i> 個人化醫療</span>
+                        <span class="meta-item"><i class="fas fa-award"></i> 已應用</span>
+                    </div>
+                    
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">
+                        3D列印個人化鼻整形重建技術
+                    </h2>
+                    
+                    <div class="grid grid-2" style="gap: 3rem; align-items: center;">
+                        <div style="text-align: center; display: flex; align-items: center; justify-content: center;">
+                            <img src="../assets/images/Research/3D_Printing.jpg" alt="3D列印個人化鼻整形重建技術" style="max-width: 100%; max-height: 400px; width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: var(--shadow);">
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">創新突破</h3>
+                            <p style="line-height: 1.8; margin-bottom: 2rem;">
+                                針對鼻部缺損或畸形患者，我們結合3D列印技術與個人化醫療設計，
+                                開發出精準的重建手術導引系統。
+                            </p>
+                            
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">技術優勢</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    個人化手術導引模板製作
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    提升手術精準度與成功率
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    縮短手術時間與復原期
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    改善患者外觀與自信心
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--secondary-color); border-radius: 8px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">應用成果</h3>
+                        <p style="line-height: 1.8;">
+                            已成功應用於50+位患者，重建成功率達95%，顯著提升患者生活品質與心理健康。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Research 3: Custom Devices -->
+                <div class="research-detail-card">
+                    <div class="research-meta">
+                        <span class="meta-item"><i class="fas fa-hand-scissors"></i> 手外科</span>
+                        <span class="meta-item"><i class="fas fa-cogs"></i> 客製化裝置</span>
+                        <span class="meta-item"><i class="fas fa-award"></i> 已應用</span>
+                    </div>
+                    
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">
+                        客製化伸指機轉重建系統
+                    </h2>
+                    
+                    <div class="grid grid-2" style="gap: 3rem; align-items: center;">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">研究動機</h3>
+                            <p style="line-height: 1.8; margin-bottom: 2rem;">
+                                手部燒燙傷或外傷常導致伸指功能障礙，嚴重影響患者日常生活。
+                                傳統治療方法效果有限，我們開發了創新的客製化伸指重建系統。
+                            </p>
+                            
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">創新特色</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    個人化裝置設計與製作
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    結合手術與復健訓練方案
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    智慧型監控與調整系統
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div style="text-align: center; display: flex; align-items: center; justify-content: center;">
+                            <img src="../assets/images/Research/extensor.jpg" alt="客製化伸指機轉重建系統" style="max-width: 100%; max-height: 400px; width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: var(--shadow);">
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--secondary-color); border-radius: 8px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">應用成果</h3>
+                        <p style="line-height: 1.8;">
+                            協助30+位手部功能障礙患者恢復伸指能力，功能改善率達88%，大幅提升日常生活獨立性。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Research 4: AI Eyelid Analysis -->
+                <div class="research-detail-card">
+                    <div class="research-meta">
+                        <span class="meta-item"><i class="fas fa-mobile-alt"></i> 智慧手機應用</span>
+                        <span class="meta-item"><i class="fas fa-brain"></i> 人工智慧</span>
+                        <span class="meta-item"><i class="fas fa-award"></i> 已應用</span>
+                    </div>
+                    
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">
+                        智慧型眼瞼功能評估與預測系統
+                    </h2>
+                    
+                    <div class="grid grid-2" style="gap: 3rem; align-items: center;">
+                        <div style="text-align: center; display: flex; align-items: center; justify-content: center;">
+                            <img src="../assets/images/Research/Upper eyelid.jpg" alt="智慧型眼瞼功能評估與預測系統" style="max-width: 100%; max-height: 400px; width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: var(--shadow);">
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">創新技術</h3>
+                            <p style="line-height: 1.8; margin-bottom: 2rem;">
+                                結合智慧手機攝影功能與人工智慧深度學習演算法，開發出便攜式眼瞼功能評估系統。
+                                透過影像分析技術，精準預測眼瞼手術後的功能恢復程度。
+                            </p>
+                            
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">核心功能</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    精準預測上眼瞼下垂程度
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    評估下眼瞼緣退縮程度
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    分析提眼瞼肌功能狀態
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    提供個人化手術建議
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--secondary-color); border-radius: 8px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">應用成果</h3>
+                        <p style="line-height: 1.8;">
+                            已協助200+位眼瞼功能障礙患者進行術前評估，預測準確度達92%，顯著提升手術成功率與患者滿意度。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Research 1: AI Analysis -->
+                <div class="research-detail-card">
+                    <div class="research-meta">
+                        <span class="meta-item"><i class="fas fa-brain"></i> 人工智慧</span>
+                        <span class="meta-item"><i class="fas fa-stethoscope"></i> 臨床診斷</span>
+                        <span class="meta-item"><i class="fas fa-chart-line"></i> 進行中</span>
+                    </div>
+                    
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">
+                        視覺驅動智慧燒燙傷分析預測系統
+                    </h2>
+                    
+                    <div class="grid grid-2" style="gap: 3rem; align-items: center;">
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">研究背景</h3>
+                            <p style="line-height: 1.8; margin-bottom: 2rem;">
+                                傳統燒燙傷面積與深度評估主要依賴醫師經驗判斷，容易產生主觀誤差。為提升診斷精準度與一致性，
+                                我們開發了基於深度學習的智慧型燒燙傷分析系統。
+                            </p>
+                            
+                            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">技術特點</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    自動化燒燙傷面積計算，準確度達95%以上
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    深度學習模型可辨識不同程度燒燙傷
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    即時診斷報告產出，提升醫療效率
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 1rem;"></i>
+                                    預測治療成效與復原時程
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <div style="background: var(--secondary-color); padding: 2rem; border-radius: 8px; text-align: center;">
+                                <i class="fas fa-laptop-medical" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">系統架構</h4>
+                                <p style="color: var(--text-light);">
+                                    整合影像處理、機器學習與臨床資料庫，
+                                    提供全方位的智慧診斷支援系統
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--secondary-color); border-radius: 8px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">應用成果</h3>
+                        <p style="line-height: 1.8;">
+                            此系統已在本中心臨床試驗中展現優異表現，不僅提升診斷準確度，更大幅縮短診斷時間。
+                            預期將能協助年輕醫師快速建立診斷能力，並為遠距醫療提供強力支援。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">相關學術發表</h2>
+                    <p class="section-subtitle">近期重要研究成果與國際期刊發表</p>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="publication-title">
+                        Machine learning approach for predicting inhalation injury in patients with burns
+                    </div>
+                    <div class="publication-authors">
+                        Yang SY, Huang CJ, Yen CI, Chang SY, Tsai CH, Lin YT
+                    </div>
+                    <div class="publication-journal">
+                        Burns. 2023;49(7):1592-1601. (IF: 3.2)
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="publication-title">
+                        Alar Crease Creation Suture in Nasal Reconstruction
+                    </div>
+                    <div class="publication-authors">
+                        Yen CI, Huang CJ, Chang CS, Yang JY, Chuang SS
+                    </div>
+                    <div class="publication-journal">
+                        Plastic and Reconstructive Surgery. 2024 Feb 1;153(2):478-481. (IF: 4.2)
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="publication-title">
+                        Stack versus te technique for central slip reconstruction during vascularized toe proximal interphalangeal joint transfer
+                    </div>
+                    <div class="publication-authors">
+                        Peng C, Lee CH, Lin YT, Tsai CH, Yang JY
+                    </div>
+                    <div class="publication-journal">
+                        Plastic and Reconstructive Surgery. 2024;154(3):508e-513e. (IF: 4.2)
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="publication-title">
+                        Risk factors for postoperative adverse airway events in patients with primary oral cancer undergoing reconstruction without prophylactic tracheostomy
+                    </div>
+                    <div class="publication-authors">
+                        Tsai CH, Liu YC, Kao HK, Chang KP, Tsang NM, Huang CJ
+                    </div>
+                    <div class="publication-journal">
+                        Asian Journal of Surgery. 2024 Apr;47(4):1763-1768. (IF: 2.4)
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="../index.html#publications" class="btn btn-outline">
+                        <i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i>
+                        返回首頁查看更多
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h2 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;">
+                        加入我們的研究團隊
+                    </h2>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-light); margin-bottom: 2rem;">
+                        如果您對燒燙傷醫學研究有興趣，或希望了解更多關於我們研究計畫的資訊，
+                        歡迎與我們聯繫。我們期待與更多優秀的研究人員共同推動醫學發展。
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="../index.html#contact" class="btn btn-primary" style="font-size: 1.1rem;">
+                            <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                            聯絡研究團隊
+                        </a>
+                        <a href="../index.html#team" class="btn btn-outline" style="font-size: 1.1rem;">
+                            <i class="fas fa-users" style="margin-right: 0.5rem;"></i>
+                            認識研究人員
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>林口長庚燒燙傷中心</h3>
+                    <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速連結</h3>
+                    <ul>
+                        <li><a href="../index.html#about">關於我們</a></li>
+                        <li><a href="../index.html#services">服務項目</a></li>
+                        <li><a href="../index.html#research">研究領域</a></li>
+                        <li><a href="education.html">衛教資訊</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>聯絡資訊</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>電話: +886-3-328-1200 ext. 2881</li>
+                        <li>地址: 桃園市龜山區復興街5號</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
