@@ -241,10 +241,35 @@
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-title">選單</span>
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="../index.html#about">關於我們</a></li>
+                    <li><a href="../index.html#team">醫療團隊</a></li>
+                    <li><a href="../index.html#services">服務項目</a></li>
+                    <li><a href="../index.html#research">研究領域</a></li>
+                    <li><a href="education.html" class="active">衛教資訊</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                    <li><a href="../index.html#contact">聯絡我們</a></li>
+                    <li><a href="education-en.html" class="language-switch">English</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     </header>
 
     <!-- Breadcrumb -->

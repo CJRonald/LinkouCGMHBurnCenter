@@ -178,12 +178,42 @@
             <!-- Navigation -->
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="../index-en.html#about">About Us</a></li>
-                    <li><a href="../index-en.html#team">Faculty</a></li>
-                    <li><a href="../index-en.html#services">Services</a></li>
-                    <li><a href="../index-en.html#research">Research</a></li>
-                    <li><a href="education-en.html">Education</a></li>
-                    <li><a href="news-en.html">News</a></li>
+                    <li>
+                        <a href="../index-en.html#about">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index-en.html#about">Overview</a></li>
+                            <li><a href="about-en.html#history">History</a></li>
+                            <li><a href="about-en.html#facilities">Facilities</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../index-en.html#team">Faculty</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index-en.html#team">Faculty</a></li>
+                            <li><a href="team-en.html">All Team</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../index-en.html#services">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index-en.html#services">Core Services</a></li>
+                            <li><a href="services-en.html">Detailed Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../index-en.html#research">Research</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index-en.html#research">Research Highlights</a></li>
+                            <li><a href="../index-en.html#publications">Publications</a></li>
+                            <li><a href="research-en.html">Detailed Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="education-en.html">Education</a>
+                    </li>
+                    <li>
+                        <a href="news-en.html">News</a>
+                    </li>
                 </ul>
             </nav>
             
@@ -194,9 +224,79 @@
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-menu">
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index-en.html#about" class="mobile-menu-link">About Us</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="../index-en.html#about">Overview</a></li>
+                        <li><a href="about-en.html#history">History</a></li>
+                        <li><a href="about-en.html#facilities">Facilities</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index-en.html#team" class="mobile-menu-link">Faculty</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="../index-en.html#team">Faculty</a></li>
+                        <li><a href="team-en.html">All Team</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index-en.html#services" class="mobile-menu-link">Services</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="../index-en.html#services">Core Services</a></li>
+                        <li><a href="services-en.html">Detailed Information</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index-en.html#research" class="mobile-menu-link">Research</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="../index-en.html#research">Research Highlights</a></li>
+                        <li><a href="../index-en.html#publications">Publications</a></li>
+                        <li><a href="research-en.html">Detailed Information</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="education-en.html" class="mobile-menu-link">Education</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="news-en.html" class="mobile-menu-link">News</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-utils">
+                <a href="../index-en.html#contact" class="btn btn-outline">Contact Us</a>
+                <a href="services.html" class="language-switch">中文</a>
+            </div>
         </div>
     </header>
 
