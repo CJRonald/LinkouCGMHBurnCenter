@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
+    const mobileNav = document.querySelector('.mobile-nav');
     
-    if (mobileMenuBtn && navMenu) {
+    if (mobileMenuBtn && mobileNav) {
         mobileMenuBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+            mobileNav.classList.toggle('active');
             
             // Toggle hamburger animation
             const icon = this.querySelector('i');
@@ -21,14 +21,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (navMenu && !e.target.closest('.header')) {
-            navMenu.classList.remove('active');
+        if (mobileNav && !e.target.closest('.header') && !e.target.closest('.mobile-nav')) {
+            mobileNav.classList.remove('active');
             const icon = mobileMenuBtn?.querySelector('i');
             if (icon) {
                 icon.classList.add('fa-bars');
                 icon.classList.remove('fa-times');
             }
         }
+    });
+    
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+        link.addEventListener('click', function() {
+            mobileNav?.classList.remove('active');
+            const icon = mobileMenuBtn?.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
     });
     
     // Smooth scrolling for anchor links
@@ -50,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 // Close mobile menu if open
-                navMenu?.classList.remove('active');
+                mobileNav?.classList.remove('active');
             }
         });
     });
@@ -151,7 +163,27 @@ function debounce(func, wait) {
     };
 }
 
+// Global mobile menu toggle function
+function toggleMobileMenu() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mobileNav) {
+        mobileNav.classList.toggle('active');
+        
+        // Toggle hamburger animation
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+    }
+}
+
 // Export for use in other scripts
 window.CGMHUtils = {
     debounce
 };
+
+// Make toggleMobileMenu globally available
+window.toggleMobileMenu = toggleMobileMenu;
