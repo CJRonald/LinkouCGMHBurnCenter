@@ -1,25 +1,125 @@
 // Main JavaScript - CGMH Burn Center v2
 
+// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM Content Loaded'); // Debug log
     
-    // Mobile Menu Toggle
+    // Wait a bit more to ensure all elements are ready
+    setTimeout(function() {
+        initializeMobileMenu();
+    }, 100);
+});
+
+// Mobile Menu Initialization
+function initializeMobileMenu() {
+    console.log('Initializing mobile menu...'); // Debug log
+    
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileNav = document.querySelector('.mobile-nav');
     
+    console.log('Mobile menu elements:', { btn: mobileMenuBtn, nav: mobileNav }); // Debug log
+    
     if (mobileMenuBtn && mobileNav) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileNav.classList.toggle('active');
+        console.log('Setting up mobile menu event listeners'); // Debug log
+        
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Mobile menu button clicked!'); // Debug log
+            console.log('Current classes:', mobileNav.className); // Debug log
+            
+            const isActive = mobileNav.classList.contains('active');
+            console.log('Is currently active:', isActive); // Debug log
+            
+            if (isActive) {
+                mobileNav.classList.remove('active');
+                console.log('Removed active class'); // Debug log
+            } else {
+                mobileNav.classList.add('active');
+                console.log('Added active class'); // Debug log
+            }
             
             // Toggle hamburger animation
             const icon = this.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars');
                 icon.classList.toggle('fa-times');
+                console.log('Toggled icon classes:', icon.className); // Debug log
             }
         });
+        
+        // Initialize submenu toggles
+        initializeSubmenuToggles();
+        
+        console.log('Mobile menu initialized successfully'); // Debug log
+    } else {
+        console.error('Mobile menu elements not found!', { btn: mobileMenuBtn, nav: mobileNav });
     }
+}
+
+// Initialize submenu toggle functionality
+function initializeSubmenuToggles() {
+    const submenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+    
+    console.log('Found submenu toggles:', submenuToggles.length); // Debug log
+    
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Submenu toggle clicked'); // Debug log
+            
+            // Find the submenu for this toggle
+            const menuItem = this.closest('.mobile-menu-item');
+            const submenu = menuItem.querySelector('.mobile-submenu');
+            const icon = this.querySelector('i');
+            
+            if (submenu) {
+                // Toggle the submenu
+                const isActive = submenu.classList.contains('active');
+                
+                // Close all other submenus
+                document.querySelectorAll('.mobile-submenu.active').forEach(otherSubmenu => {
+                    if (otherSubmenu !== submenu) {
+                        otherSubmenu.classList.remove('active');
+                        const otherToggle = otherSubmenu.closest('.mobile-menu-item').querySelector('.mobile-submenu-toggle');
+                        if (otherToggle) {
+                            otherToggle.classList.remove('active');
+                        }
+                    }
+                });
+                
+                // Close all other toggle buttons
+                document.querySelectorAll('.mobile-submenu-toggle.active').forEach(otherToggle => {
+                    if (otherToggle !== this) {
+                        otherToggle.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current submenu
+                if (isActive) {
+                    submenu.classList.remove('active');
+                    this.classList.remove('active');
+                    console.log('Closed submenu'); // Debug log
+                } else {
+                    submenu.classList.add('active');
+                    this.classList.add('active');
+                    console.log('Opened submenu'); // Debug log
+                }
+            }
+        });
+    });
+}
+
+// Initialize other functionality
+document.addEventListener('DOMContentLoaded', function() {
     
     // Close mobile menu when clicking outside
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    
     document.addEventListener('click', function(e) {
         if (mobileNav && !e.target.closest('.header') && !e.target.closest('.mobile-nav')) {
             mobileNav.classList.remove('active');
@@ -164,12 +264,20 @@ function debounce(func, wait) {
 }
 
 // Global mobile menu toggle function
-function toggleMobileMenu() {
+function toggleMobileMenu(event) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    
     const mobileNav = document.querySelector('.mobile-nav');
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     
+    console.log('toggleMobileMenu called', mobileNav, mobileMenuBtn); // Debug log
+    
     if (mobileNav) {
         mobileNav.classList.toggle('active');
+        console.log('Menu active state:', mobileNav.classList.contains('active')); // Debug log
         
         // Toggle hamburger animation
         const icon = mobileMenuBtn?.querySelector('i');

@@ -79,7 +79,7 @@
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -87,12 +87,66 @@
         <!-- Mobile Navigation -->
         <div class="mobile-nav" id="mobileNav">
             <ul class="mobile-nav-menu">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#team">Faculty</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="pages/education-en.html">Education</a></li>
-                <li><a href="pages/news-en.html">News</a></li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="#about" class="mobile-menu-link">About Us</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="#about">Overview</a></li>
+                        <li><a href="pages/about-en.html#history">History</a></li>
+                        <li><a href="pages/about-en.html#facilities">Facilities</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="#team" class="mobile-menu-link">Faculty</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="#team">Faculty</a></li>
+                        <li><a href="pages/team-en.html">All Team</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="#services" class="mobile-menu-link">Services</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="#services">Core Services</a></li>
+                        <li><a href="pages/services-en.html">Detailed Information</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="#research" class="mobile-menu-link">Research</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="#research">Research Highlights</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="pages/research-en.html">Detailed Information</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="pages/education-en.html" class="mobile-menu-link">Education</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="pages/news-en.html" class="mobile-menu-link">News</a>
+                    </div>
+                </li>
             </ul>
             <div class="mobile-utils">
                 <a href="#contact" class="btn btn-outline">Contact Us</a>

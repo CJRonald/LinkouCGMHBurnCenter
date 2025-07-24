@@ -79,7 +79,7 @@
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -87,12 +87,66 @@
         <!-- Mobile Navigation -->
         <div class="mobile-nav" id="mobileNav">
             <ul class="mobile-nav-menu">
-                <li><a href="#about">關於我們</a></li>
-                <li><a href="#team">醫療團隊</a></li>
-                <li><a href="#services">服務項目</a></li>
-                <li><a href="#research">研究領域</a></li>
-                <li><a href="pages/education.html">衛教資訊</a></li>
-                <li><a href="pages/news.html">最新消息</a></li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="#about" class="mobile-menu-link">關於我們</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="#about">中心介紹</a></li>
+                        <li><a href="pages/about.html#history">發展歷程</a></li>
+                        <li><a href="pages/about.html#facilities">設備環境</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="#team" class="mobile-menu-link">醫療團隊</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="#team">主治醫師</a></li>
+                        <li><a href="pages/team.html">完整團隊</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="#services" class="mobile-menu-link">服務項目</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="#services">核心服務</a></li>
+                        <li><a href="pages/services.html">詳細介紹</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="#research" class="mobile-menu-link">研究領域</a>
+                        <button class="mobile-submenu-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-submenu">
+                        <li><a href="#research">研究亮點</a></li>
+                        <li><a href="#publications">學術發表</a></li>
+                        <li><a href="pages/research.html">詳細資訊</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="pages/education.html" class="mobile-menu-link">衛教資訊</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="pages/news.html" class="mobile-menu-link">最新消息</a>
+                    </div>
+                </li>
             </ul>
             <div class="mobile-utils">
                 <a href="#contact" class="btn btn-outline">聯絡我們</a>
