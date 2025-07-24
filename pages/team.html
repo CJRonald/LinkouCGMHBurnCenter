@@ -22,11 +22,47 @@
             box-shadow: var(--shadow);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
         }
         
         .team-member:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
+        }
+        
+        .team-member::after {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 24px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .team-member:hover::after {
+            opacity: 1;
+        }
+        
+        .team-member::before {
+            content: '掛號';
+            position: absolute;
+            top: 1.2rem;
+            right: 0.5rem;
+            font-size: 0.7rem;
+            color: white;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .team-member:hover::before {
+            opacity: 1;
         }
         
         .member-photo {
@@ -295,7 +331,7 @@
                 <div id="senior-attending" class="team-category">
                     <h2 class="category-title">資深主治醫師</h2>
                     <div class="grid grid-4">
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/0142">
                             <img src="../assets/images/team/JYYang.jpg" alt="楊瑞永醫師" class="member-photo">
                             <h3 class="member-name">楊瑞永 醫師</h3>
                             <p class="member-title">顧問級主治醫師</p>
@@ -306,7 +342,7 @@
                             </p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/1744">
                             <img src="../assets/images/team/SSChaung.jpg" alt="莊秀樹醫師" class="member-photo">
                             <h3 class="member-name">莊秀樹 醫師</h3>
                             <p class="member-title">顧問級主治醫師</p>
@@ -323,7 +359,7 @@
                 <div id="attending" class="team-category">
                     <h2 class="category-title">主治醫師</h2>
                     <div class="grid grid-4">
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/2254">
                             <img src="../assets/images/team/TYLin.jpg" alt="林有德醫師" class="member-photo">
                             <h3 class="member-name">林有德 醫師</h3>
                             <p class="member-title">外科部部長</p>
@@ -333,7 +369,7 @@
                             </p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/8288">
                             <img src="../assets/images/team/CIYen.jpg" alt="顏琤嬑醫師" class="member-photo">
                             <h3 class="member-name">顏琤嬑 醫師</h3>
                             <p class="member-title">一般整形外科主任</p>
@@ -343,7 +379,7 @@
                             </p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/7025">
                             <img src="../assets/images/team/SYChang.jpg" alt="張淑茵醫師" class="member-photo">
                             <h3 class="member-name">張淑茵 醫師</h3>
                             <p class="member-title">燙傷中心主任</p>
@@ -353,7 +389,7 @@
                             </p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/7407">
                             <img src="../assets/images/team/CHTsai.jpg" alt="蔡嘉軒醫師" class="member-photo">
                             <h3 class="member-name">蔡嘉軒 醫師</h3>
                             <p class="member-title">教育委員</p>
@@ -363,7 +399,7 @@
                             </p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/7830">
                             <img src="../assets/images/team/SIYang.jpg" alt="楊士毅醫師" class="member-photo">
                             <h3 class="member-name">楊士毅 醫師</h3>
                             <p class="member-title">專責主治醫師</p>
@@ -373,7 +409,7 @@
                             </p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/0479">
                             <img src="../assets/images/team/SHMao.png" alt="毛士軒醫師" class="member-photo">
                             <h3 class="member-name">毛士軒 醫師</h3>
                             <p class="member-title">醫師研究員</p>
@@ -384,7 +420,7 @@
                             </p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/1571">
                             <img src="../assets/images/team/SHKwon.jpg" alt="權秀河醫師" class="member-photo">
                             <h3 class="member-name">權秀河 醫師</h3>
                             <p class="member-title">專責主治醫師</p>
@@ -395,7 +431,7 @@
                             </p>
                         </div>
                         
-                        <div class="team-member">
+                        <div class="team-member" data-appointment-url="https://www.cgmh.org.tw/tw/Services/DoctorInfo/1666">
                             <img src="../assets/images/team/CJHuang.jpg" alt="黃志榕醫師" class="member-photo">
                             <h3 class="member-name">黃志榕 醫師</h3>
                             <p class="member-title">專責主治醫師</p>
@@ -516,5 +552,22 @@
 
     <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
+    
+    <!-- Team Card Click Functionality -->
+    <script>
+        // Add click event listeners to all team member cards with appointment URLs
+        document.addEventListener('DOMContentLoaded', function() {
+            const teamMembers = document.querySelectorAll('.team-member[data-appointment-url]');
+            
+            teamMembers.forEach(function(member) {
+                member.addEventListener('click', function() {
+                    const appointmentUrl = this.getAttribute('data-appointment-url');
+                    if (appointmentUrl) {
+                        window.open(appointmentUrl, '_blank');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
