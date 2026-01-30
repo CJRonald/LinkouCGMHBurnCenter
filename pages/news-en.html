@@ -274,11 +274,12 @@
 
                 <!-- Filter Tabs -->
                 <div class="filter-tabs">
-                    <a href="#" class="filter-tab active">All News</a>
-                    <a href="#" class="filter-tab">Medical Services</a>
-                    <a href="#" class="filter-tab">Research</a>
-                    <a href="#" class="filter-tab">Academic Events</a>
-                    <a href="#" class="filter-tab">Education</a>
+                    <a href="#" class="filter-tab active" data-category="all">All News</a>
+                    <a href="#" class="filter-tab" data-category="Memorial Event">Memorial Event</a>
+                    <a href="#" class="filter-tab" data-category="Medical Services">Medical Services</a>
+                    <a href="#" class="filter-tab" data-category="Research">Research</a>
+                    <a href="#" class="filter-tab" data-category="Academic Events">Academic Events</a>
+                    <a href="#" class="filter-tab" data-category="Education">Education</a>
                 </div>
             </div>
         </section>
@@ -287,7 +288,7 @@
         <section class="section" style="background-color: var(--secondary-color);">
             <div class="container">
                 <!-- News Article - Latest -->
-                <article class="news-article">
+                <article class="news-article" data-category="Memorial Event">
                     <div class="news-meta">
                         <span class="news-date">January 27, 2026</span>
                         <span class="news-category">Memorial Event</span>
@@ -312,7 +313,7 @@
                 </article>
 
                 <!-- News Article 1 -->
-                <article class="news-article">
+                <article class="news-article" data-category="Research">
                     <div class="news-meta">
                         <span class="news-date">January 15, 2025</span>
                         <span class="news-category">Research</span>
@@ -336,7 +337,7 @@
                 </article>
 
                 <!-- News Article 2 -->
-                <article class="news-article">
+                <article class="news-article" data-category="Medical Services">
                     <div class="news-meta">
                         <span class="news-date">January 8, 2025</span>
                         <span class="news-category">Medical Services</span>
@@ -360,7 +361,7 @@
                 </article>
 
                 <!-- News Article 3 -->
-                <article class="news-article">
+                <article class="news-article" data-category="Academic Events">
                     <div class="news-meta">
                         <span class="news-date">January 2, 2025</span>
                         <span class="news-category">Academic Events</span>
@@ -384,7 +385,7 @@
                 </article>
 
                 <!-- News Article 4 -->
-                <article class="news-article">
+                <article class="news-article" data-category="Education">
                     <div class="news-meta">
                         <span class="news-date">December 28, 2024</span>
                         <span class="news-category">Education</span>
@@ -408,7 +409,7 @@
                 </article>
 
                 <!-- News Article 5 -->
-                <article class="news-article">
+                <article class="news-article" data-category="Research">
                     <div class="news-meta">
                         <span class="news-date">December 20, 2024</span>
                         <span class="news-category">Research</span>
@@ -432,7 +433,7 @@
                 </article>
 
                 <!-- News Article 6 -->
-                <article class="news-article">
+                <article class="news-article" data-category="Medical Services">
                     <div class="news-meta">
                         <span class="news-date">December 15, 2024</span>
                         <span class="news-category">Medical Services</span>
@@ -518,6 +519,45 @@
 
     <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
+
+    <!-- News Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const newsArticles = document.querySelectorAll('.news-article');
+
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Remove active class from all tabs
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-category');
+
+                    newsArticles.forEach(article => {
+                        const articleCategory = article.getAttribute('data-category');
+
+                        if (category === 'all' || articleCategory === category) {
+                            article.style.display = 'block';
+                            // Add fade-in animation
+                            article.style.opacity = '0';
+                            article.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                article.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                                article.style.opacity = '1';
+                                article.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

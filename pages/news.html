@@ -274,11 +274,12 @@
 
                 <!-- Filter Tabs -->
                 <div class="filter-tabs">
-                    <a href="#" class="filter-tab active">全部消息</a>
-                    <a href="#" class="filter-tab">醫療服務</a>
-                    <a href="#" class="filter-tab">研究成果</a>
-                    <a href="#" class="filter-tab">學術活動</a>
-                    <a href="#" class="filter-tab">教育訓練</a>
+                    <a href="#" class="filter-tab active" data-category="all">全部消息</a>
+                    <a href="#" class="filter-tab" data-category="紀念活動">紀念活動</a>
+                    <a href="#" class="filter-tab" data-category="醫療服務">醫療服務</a>
+                    <a href="#" class="filter-tab" data-category="研究成果">研究成果</a>
+                    <a href="#" class="filter-tab" data-category="學術活動">學術活動</a>
+                    <a href="#" class="filter-tab" data-category="教育訓練">教育訓練</a>
                 </div>
             </div>
         </section>
@@ -287,7 +288,7 @@
         <section class="section" style="background-color: var(--secondary-color);">
             <div class="container">
                 <!-- News Article - Latest -->
-                <article class="news-article">
+                <article class="news-article" data-category="紀念活動">
                     <div class="news-meta">
                         <span class="news-date">2026年1月27日</span>
                         <span class="news-category">紀念活動</span>
@@ -308,7 +309,7 @@
                 </article>
 
                 <!-- News Article 1 -->
-                <article class="news-article">
+                <article class="news-article" data-category="研究成果">
                     <div class="news-meta">
                         <span class="news-date">2025年1月15日</span>
                         <span class="news-category">研究成果</span>
@@ -328,7 +329,7 @@
                 </article>
 
                 <!-- News Article 2 -->
-                <article class="news-article">
+                <article class="news-article" data-category="醫療服務">
                     <div class="news-meta">
                         <span class="news-date">2025年1月8日</span>
                         <span class="news-category">醫療服務</span>
@@ -348,7 +349,7 @@
                 </article>
 
                 <!-- News Article 3 -->
-                <article class="news-article">
+                <article class="news-article" data-category="學術活動">
                     <div class="news-meta">
                         <span class="news-date">2025年1月2日</span>
                         <span class="news-category">學術活動</span>
@@ -368,7 +369,7 @@
                 </article>
 
                 <!-- News Article 4 -->
-                <article class="news-article">
+                <article class="news-article" data-category="教育訓練">
                     <div class="news-meta">
                         <span class="news-date">2024年12月28日</span>
                         <span class="news-category">教育訓練</span>
@@ -388,7 +389,7 @@
                 </article>
 
                 <!-- News Article 5 -->
-                <article class="news-article">
+                <article class="news-article" data-category="研究成果">
                     <div class="news-meta">
                         <span class="news-date">2024年12月20日</span>
                         <span class="news-category">研究成果</span>
@@ -408,7 +409,7 @@
                 </article>
 
                 <!-- News Article 6 -->
-                <article class="news-article">
+                <article class="news-article" data-category="醫療服務">
                     <div class="news-meta">
                         <span class="news-date">2024年12月15日</span>
                         <span class="news-category">醫療服務</span>
@@ -489,6 +490,45 @@
 
     <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
+
+    <!-- News Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const newsArticles = document.querySelectorAll('.news-article');
+
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Remove active class from all tabs
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-category');
+
+                    newsArticles.forEach(article => {
+                        const articleCategory = article.getAttribute('data-category');
+
+                        if (category === 'all' || articleCategory === category) {
+                            article.style.display = 'block';
+                            // Add fade-in animation
+                            article.style.opacity = '0';
+                            article.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                article.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                                article.style.opacity = '1';
+                                article.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
