@@ -177,79 +177,104 @@
         </section>
 
         <!-- Latest News Section -->
-        <section id="news" class="section" style="background-color: var(--secondary-color);">
+        <section id="news" class="section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">最新消息</h2>
                     <p class="section-subtitle">關注林口長庚燒燙傷中心最新動態</p>
                 </div>
 
-                <div class="grid grid-3">
-                    <!-- News Item 1 -->
-                    <div class="card" style="border-left: 4px solid var(--primary-color);">
-                        <div style="margin-bottom: 1rem;">
+                <!-- Featured News Hero -->
+                <div
+                    style="position: relative; border-radius: 8px; overflow: hidden; margin-bottom: 3rem; min-height: 400px; background: transparent;">
+                    >
+                    <!-- Background with overlay -->
+                    <div
+                        style="position: absolute; inset: 0; background: url('assets/news/2026/20260127_八仙塵爆十週年追思會/02_貴賓合影.jpg') center/cover no-repeat;">
+                    </div>
+
+                    <!-- Content -->
+                    <div
+                        style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: flex-end; min-height: 400px; padding: 2rem;">
+                        <!-- Floating Card -->
+                        <div
+                            style="background: white; border-radius: 12px; padding: 2.5rem; max-width: 420px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
                             <span
-                                style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">2026年1月27日</span>
-                            <span
-                                style="background: #fff3cd; color: #856404; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; margin-left: 0.5rem;">紀念活動</span>
-                        </div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; line-height: 1.4;">
-                            <a href="pages/news-20260127-formosa-memorial.html"
-                                style="color: var(--primary-color); text-decoration: none;">
+                                style="display: inline-block; background: #fff3cd; color: #856404; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">紀念活動</span>
+                            <h3
+                                style="font-size: 1.6rem; font-weight: 700; color: var(--text-color); margin-bottom: 1rem; line-height: 1.4;">
                                 八仙塵爆十週年紀念暨莊秀樹醫師追思會
+                            </h3>
+                            <p
+                                style="color: var(--text-light); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                                以『感恩、希望、前行』為主軸，緬懷醫療團隊無私奉獻，向所有傷友致敬。
+                            </p>
+                            <a href="pages/news-20260127-formosa-memorial.html"
+                                style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; font-size: 1rem;">
+                                閱讀完整報導 <i class="fas fa-arrow-right"></i>
                             </a>
-                        </h3>
-                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-                            以『感恩、希望、前行』為主軸，緬懷醫療團隊無私奉獻，向所有傷友致敬。
-                        </p>
-                        <a href="pages/news-20260127-formosa-memorial.html"
-                            style="color: var(--primary-color); text-decoration: none; font-weight: 500; font-size: 0.9rem;">
-                            閱讀更多 <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
-                        </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary News Grid -->
+                <div class="grid grid-3" style="gap: 2rem;">
+                    <!-- News Item 1 -->
+                    <div
+                        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-brain" style="font-size: 4rem; color: rgba(255,255,255,0.9);"></i>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="margin-bottom: 0.75rem;">
+                                <span style="color: var(--text-muted); font-size: 0.85rem;">研究成果</span>
+                            </div>
+                            <h4
+                                style="font-size: 1.1rem; font-weight: 600; color: var(--text-color); margin-bottom: 0.5rem; line-height: 1.4;">
+                                <a href="pages/news.html"
+                                    style="color: inherit; text-decoration: none;">AI燒燙傷診斷系統正式導入臨床應用</a>
+                            </h4>
+                        </div>
                     </div>
 
                     <!-- News Item 2 -->
-                    <div class="card" style="border-left: 4px solid var(--primary-color);">
-                        <div style="margin-bottom: 1rem;">
-                            <span
-                                style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">2025年1月15日</span>
-                            <span
-                                style="background: #d4edda; color: #155724; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; margin-left: 0.5rem;">研究成果</span>
+                    <div
+                        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-cube" style="font-size: 4rem; color: rgba(255,255,255,0.9);"></i>
                         </div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; line-height: 1.4;">
-                            <a href="pages/news.html" style="color: var(--primary-color); text-decoration: none;">
-                                AI燒燙傷診斷系統正式導入臨床應用
-                            </a>
-                        </h3>
-                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-                            自主研發的AI診斷系統準確度達95%以上，正式導入日常臨床診斷流程。
-                        </p>
-                        <a href="pages/news.html"
-                            style="color: var(--primary-color); text-decoration: none; font-weight: 500; font-size: 0.9rem;">
-                            閱讀更多 <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
-                        </a>
+                        <div style="padding: 1.5rem;">
+                            <div style="margin-bottom: 0.75rem;">
+                                <span style="color: var(--text-muted); font-size: 0.85rem;">醫療服務</span>
+                            </div>
+                            <h4
+                                style="font-size: 1.1rem; font-weight: 600; color: var(--text-color); margin-bottom: 0.5rem; line-height: 1.4;">
+                                <a href="pages/news.html"
+                                    style="color: inherit; text-decoration: none;">新增3D列印個人化重建服務</a>
+                            </h4>
+                        </div>
                     </div>
 
                     <!-- News Item 3 -->
-                    <div class="card" style="border-left: 4px solid var(--primary-color);">
-                        <div style="margin-bottom: 1rem;">
-                            <span
-                                style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">2025年1月8日</span>
-                            <span
-                                style="background: #cce5ff; color: #004085; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; margin-left: 0.5rem;">醫療服務</span>
+                    <div
+                        style="background: white; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-chalkboard-teacher"
+                                style="font-size: 4rem; color: rgba(255,255,255,0.9);"></i>
                         </div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; line-height: 1.4;">
-                            <a href="pages/news.html" style="color: var(--primary-color); text-decoration: none;">
-                                新增3D列印個人化重建服務
-                            </a>
-                        </h3>
-                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-                            透過高精度3D掃描與建模技術，為患者量身打造專屬的手術導引模板。
-                        </p>
-                        <a href="pages/news.html"
-                            style="color: var(--primary-color); text-decoration: none; font-weight: 500; font-size: 0.9rem;">
-                            閱讀更多 <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
-                        </a>
+                        <div style="padding: 1.5rem;">
+                            <div style="margin-bottom: 0.75rem;">
+                                <span style="color: var(--text-muted); font-size: 0.85rem;">學術活動</span>
+                            </div>
+                            <h4
+                                style="font-size: 1.1rem; font-weight: 600; color: var(--text-color); margin-bottom: 0.5rem; line-height: 1.4;">
+                                <a href="pages/news.html"
+                                    style="color: inherit; text-decoration: none;">2025燒燙傷醫學國際研討會即將召開</a>
+                            </h4>
+                        </div>
                     </div>
                 </div>
 
