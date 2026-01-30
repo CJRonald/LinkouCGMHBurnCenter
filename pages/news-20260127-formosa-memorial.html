@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八仙塵爆十週年紀念暨莊秀樹醫師追思會 - 林口長庚燒燙傷中心</title>
+    <meta name="description" content="八仙塵爆事件屆滿十週年，林口長庚醫院舉辦紀念暨追思會，回顧醫療歷程並緬懷莊秀樹醫師。">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <!-- Additional styles for news detail page -->
+    <style>
+        .news-detail {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .news-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .news-header h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .news-meta-detail {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .news-meta-detail span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .news-content h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .news-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .news-content ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+
+        .news-content li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .news-content blockquote {
+            background: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        .news-content blockquote p {
+            margin-bottom: 0;
+            color: var(--text-light);
+        }
+
+        .news-content strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .guest-list {
+            background: var(--secondary-color);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .guest-list ul {
+            margin: 0;
+            column-count: 2;
+            column-gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .guest-list ul {
+                column-count: 1;
+            }
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .highlight-stat {
+            text-align: center;
+        }
+
+        .highlight-stat .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .highlight-stat .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .news-footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .news-source {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .news-source a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .news-content img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="長庚醫院 Logo">
+                <div class="logo-text">
+                    <span class="main">林口長庚燒燙傷中心</span>
+                    <span class="sub">Linkou CGMH Burn Center</span>
+                </div>
+            </a>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about">關於我們</a></li>
+                    <li><a href="../index.html#team">醫療團隊</a></li>
+                    <li><a href="../index.html#services">服務項目</a></li>
+                    <li><a href="../index.html#research">研究領域</a></li>
+                    <li><a href="education.html">衛教資訊</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                </ul>
+            </nav>
+
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="news-en.html" class="language-switch">English</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-menu">
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index.html#about" class="mobile-menu-link">關於我們</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index.html#team" class="mobile-menu-link">醫療團隊</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index.html#services" class="mobile-menu-link">服務項目</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index.html#research" class="mobile-menu-link">研究領域</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="education.html" class="mobile-menu-link">衛教資訊</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="news.html" class="mobile-menu-link">最新消息</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="news-en.html" class="language-switch">English</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">首頁</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="news.html">最新消息</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>新聞稿</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="news-detail">
+                <!-- News Header -->
+                <div class="news-header">
+                    <h1>八仙塵爆十週年紀念暨莊秀樹醫師追思會</h1>
+                    <div class="news-meta-detail">
+                        <span><i class="fas fa-calendar-alt"></i> 2026年1月27日</span>
+                        <span><i class="fas fa-building"></i> 林口長庚紀念醫院</span>
+                        <span><i class="fas fa-tag"></i> 紀念活動</span>
+                    </div>
+                </div>
+
+                <!-- News Content -->
+                <div class="news-content">
+                    <p>
+                        八仙塵爆事件屆滿十週年，為回顧這段重要的醫療歷程，並向當年全力投入救治與後續照護的醫療團隊致敬，
+                        林口長庚醫院於1月27日舉辦「八仙塵爆十週年紀念暨莊秀樹醫師追思會」。
+                        活動以<strong>『感恩、希望、前行』</strong>為主軸，邀請曾參與急性救治與重建照護的醫師、護理師、
+                        返院支援的整形外科系友，以及一路攜手走過復原之路的傷友與家屬齊聚一堂，在回顧中彼此問候，也在重逢中看見重生的力量。
+                    </p>
+
+                    <!-- Highlight Stats Box -->
+                    <div class="highlight-box">
+                        <h3>關鍵醫療數據</h3>
+                        <div class="highlight-stats">
+                            <div class="highlight-stat">
+                                <span class="number">40+</span>
+                                <span class="label">4小時內接收傷患數</span>
+                            </div>
+                            <div class="highlight-stat">
+                                <span class="number">200+</span>
+                                <span class="label">急性期手術台數</span>
+                            </div>
+                            <div class="highlight-stat">
+                                <span class="number">95%</span>
+                                <span class="label">以上存活率</span>
+                            </div>
+                            <div class="highlight-stat">
+                                <span class="number">5.6</span>
+                                <span class="label">平均清創植皮次數</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>出席貴賓</h2>
+                    <div class="guest-list">
+                        <ul>
+                            <li>健保署陳亮妤署長</li>
+                            <li>長庚醫療公益發展委員會陳昱瑞主席</li>
+                            <li>長庚決策委員會程文俊主任委員</li>
+                            <li>長庚決策委員會陳建宗副主任委員</li>
+                            <li>林口長庚外科部林有德部長</li>
+                            <li>整形外科系林承弘系主任</li>
+                            <li>一般整形外科顏琤嬑主任</li>
+                            <li>林口長庚前灼傷中心主任楊瑞永</li>
+                            <li>臺灣燒傷暨傷口照護學會理事長吳思賢</li>
+                        </ul>
+                    </div>
+
+                    <img src="../assets/news/2026/20260127_八仙塵爆十週年追思會/02_貴賓合影.jpg" alt="貴賓合影">
+
+                    <h2>第一線全力搶救：撐起最艱困的時刻</h2>
+                    <p>
+                        陳昱瑞名譽主任委員表示，八仙塵爆造成大量重度燒燙傷患者湧入，林口長庚在<strong>四小時內接收了四十餘位傷患</strong>，
+                        平均燒傷面積高達體表面積50%，院內第一時間成立應變指揮中心，動員大量人力與醫療資源，
+                        並由整形外科承擔燒燙傷急性處置與後續重建醫療的核心任務。
+                    </p>
+                    <p>
+                        陳建宗副主任委員進一步指出，事故發生後兩週內，整形外科更全面暫停所有常規手術，集中量能投入救治。
+                        在急性期共執行超過<strong>200多台手術</strong>，每一位病患平均經歷了<strong>5.6次</strong>的清創與植皮。
+                        即便長庚擁有全台最多的燒燙傷床位，仍一度滿床溢出，必須啟用顯微重建加護病房分級支援，醫療量能承受極大考驗與壓力。
+                    </p>
+
+                    <h2>系友回娘家支援：病患全數順利出院</h2>
+                    <blockquote>
+                        <p>
+                            「當時人力十分吃緊，許多退休的護理師與早已在坊間執業、名聲響亮的整形外科系系友，
+                            一接到消息，二話不說便排開自家的自費手術，列出班表，『回娘家』支援手術與照護。
+                            在醫療團隊日以繼夜的努力守護下，至同年年底，包括他院轉入共五十餘位的病患，
+                            幾乎全數順利出院，達成95%以上的存活率，寫下驚人的醫療紀錄。」
+                        </p>
+                        <p style="text-align: right; margin-top: 1rem; font-style: normal; font-weight: 600;">
+                            — 外科部林有德部長
+                        </p>
+                    </blockquote>
+
+                    <h2>從存活到復原：漫長卻不孤單的路</h2>
+                    <p>
+                        林口長庚前灼傷中心主任楊瑞永醫師指出，急性期後，整形外科在後續重建階段持續扮演關鍵角色。照護範圍涵蓋：
+                    </p>
+                    <ul>
+                        <li>傷口處置</li>
+                        <li>疤痕照護</li>
+                        <li>植皮與皮瓣重建</li>
+                        <li>關節攣縮預防與矯正</li>
+                        <li>功能重建及長期追蹤</li>
+                    </ul>
+                    <p>
+                        2015年12月於桃園長庚開設的「燒燙傷門診治療中心」，結合整形外科、復健科、及精神科三大專科，
+                        聯合評估燒燙傷患者並提供個別化及最佳化的治療，陪伴<strong>超過百位傷友</strong>走過漫長的復健之路。
+                        楊醫師認為，醫療團隊不只治療傷口，更陪伴病友一步步從存活走向復原，幫助他們逐漸找回自信，重返家庭、職場與社會角色。
+                    </p>
+
+                    <img src="../assets/news/2026/20260127_八仙塵爆十週年追思會/01_活動現場.jpg" alt="活動現場">
+
+                    <h2>十年艱辛復原路：感念長庚團隊一路陪伴</h2>
+                    <p>
+                        本次活動共有傷友及家屬50餘位參加。八仙塵爆傷友<strong>夏文玲</strong>及<strong>鍾博宇</strong>說，
+                        這一路走來，真正艱辛的不只是事故當下，還有漫長的復原過程。歷經了多次手術、反覆復健與心理調適，
+                        從臥床到重新站立，每一步都充滿挑戰。雖然復原之路漫長，卻從未感到孤單，
+                        因為長庚醫療團隊始終在旁陪伴，細心調整治療計畫，傾聽需求，給予身體與心理上的支持。
+                    </p>
+                    <p>
+                        傷友<strong>林思佳</strong>也指出，當初的傷口已逐漸癒合，功能逐漸恢復，生活重新找回節奏。
+                        有許多傷友也和他一樣能重返日常生活，甚至重組家庭、迎接新成員。回顧這段歷程，心中只有更多的感謝與珍惜，
+                        期盼以自身經驗鼓勵仍在復原路上的夥伴，持續向前。
+                    </p>
+
+                    <h2>追思良醫：醫者精神長存</h2>
+                    <p>
+                        活動中特別安排隆重溫馨的追思儀式，緬懷去年12月辭世的整形外科<strong>莊秀樹醫師</strong>。
+                        整形外科系林承弘主任表示，莊醫師生前長年投入重度燒燙傷與重建醫療，在八仙塵爆發生後，
+                        親自帶領團隊承擔第一線急性救治與後續重建重任。面對高難度的重建手術，他始終親力親為，
+                        以一次性疤痕切除放鬆與全層植皮移植，協助病友改善嚴重攣縮，恢復肢體功能。
+                        多位病友感念，正是莊醫師與醫療團隊的堅持和付出，才讓他們得以重新擁抱新生。
+                    </p>
+
+                    <h2>把感恩化為前行的力量</h2>
+                    <p>
+                        曾經歷火吻的藝人<strong>Selina（任家萱）</strong>，也特別拍攝一段影片感謝莊醫師及醫療團隊，並把祝福送給所有傷友。
+                        Selina表示，當年她在林口長庚接受治療時，醫療團隊不僅全力照顧身體的復原，更在漫長的復健過程中，給予極大的支持與陪伴。
+                        她感謝醫護人員多年來始終如一的守護，也向所有八仙塵爆傷友致上最深的敬意。
+                    </p>
+                    <p>
+                        她認為每一位努力復原、勇敢回到生活的人，都是令人敬佩的榜樣，
+                        也期盼這份來自醫療與病友之間的信任與力量，能持續轉化為前行的動力，陪伴更多人走過傷後復原之路。
+                    </p>
+
+                    <h2>整形外科：重視功能與生活重建的醫療精神</h2>
+                    <p>
+                        林承弘主任表示，十週年紀念活動不只是回顧與追思，更是對醫療使命的再確認。
+                        希望持續彰顯整形外科在重大災難醫療與長期重建中的關鍵角色，
+                        並延續以病人為中心、重視功能與生活重建的醫療精神，成為未來面對重大公共事件的重要經驗與基石。
+                    </p>
+                </div>
+
+                <!-- News Footer -->
+                <div class="news-footer">
+                    <div class="news-source">
+                        <i class="fas fa-link"></i>
+                        資料來源：<a href="https://www.cgmh.org.tw/tw/News/PressNews/260129001" target="_blank">長庚醫院官方新聞稿</a>
+                    </div>
+                    <a href="news.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i> 返回最新消息
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>林口長庚燒燙傷中心</h3>
+                    <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>快速連結</h3>
+                    <ul>
+                        <li><a href="../index.html#about">關於我們</a></li>
+                        <li><a href="../index.html#services">服務項目</a></li>
+                        <li><a href="../index.html#research">研究領域</a></li>
+                        <li><a href="education.html">衛教資訊</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>聯絡資訊</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>電話: +886-3-328-1200 ext. 3221</li>
+                        <li>地址: 桃園市龜山區復興街5號</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News - Linkou CGMH Burn Center</title>
-    <meta name="description" content="Latest news from Linkou CGMH Burn Center, including medical service updates, research achievements, academic activities, educational programs and important information.">
-    
+    <meta name="description"
+        content="Latest news from Linkou CGMH Burn Center, including medical service updates, research achievements, academic activities, educational programs and important information.">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/main.css">
-    
+
     <!-- Additional styles for news page -->
     <style>
         .news-article {
@@ -24,12 +26,12 @@
             border-left: 4px solid var(--primary-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .news-article:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-hover);
         }
-        
+
         .news-meta {
             display: flex;
             gap: 1.5rem;
@@ -37,7 +39,7 @@
             flex-wrap: wrap;
             align-items: center;
         }
-        
+
         .news-date {
             background: var(--primary-color);
             color: white;
@@ -46,7 +48,7 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        
+
         .news-category {
             background: var(--secondary-color);
             color: var(--primary-color);
@@ -55,7 +57,7 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        
+
         .news-title {
             font-size: 1.5rem;
             font-weight: 600;
@@ -63,13 +65,13 @@
             margin-bottom: 1rem;
             line-height: 1.4;
         }
-        
+
         .news-excerpt {
             color: var(--text-light);
             line-height: 1.7;
             margin-bottom: 1.5rem;
         }
-        
+
         .news-read-more {
             color: var(--primary-color);
             text-decoration: none;
@@ -79,17 +81,17 @@
             gap: 0.5rem;
             transition: color 0.3s ease;
         }
-        
+
         .news-read-more:hover {
             color: var(--primary-dark);
         }
-        
+
         .breadcrumb {
             background: var(--secondary-color);
             padding: 1rem 0;
             margin-top: 80px;
         }
-        
+
         .breadcrumb-nav {
             display: flex;
             align-items: center;
@@ -97,12 +99,12 @@
             font-size: 0.9rem;
             color: var(--text-light);
         }
-        
+
         .breadcrumb a {
             color: var(--primary-color);
             text-decoration: none;
         }
-        
+
         .filter-tabs {
             display: flex;
             gap: 1rem;
@@ -110,7 +112,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        
+
         .filter-tab {
             padding: 0.75rem 1.5rem;
             border: 2px solid var(--border-color);
@@ -121,14 +123,14 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
+
         .filter-tab.active,
         .filter-tab:hover {
             border-color: var(--primary-color);
             background: var(--primary-color);
             color: white;
         }
-        
+
         .news-image {
             width: 100%;
             height: 200px;
@@ -138,6 +140,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -150,7 +153,7 @@
                     <span class="sub">林口長庚燒燙傷中心</span>
                 </div>
             </a>
-            
+
             <!-- Navigation -->
             <nav>
                 <ul class="nav-menu">
@@ -162,19 +165,19 @@
                     <li><a href="news-en.html">News</a></li>
                 </ul>
             </nav>
-            
+
             <!-- Utility Buttons -->
             <div class="header-utils">
                 <a href="../index-en.html#contact" class="btn btn-outline">Contact Us</a>
                 <a href="news.html" class="language-switch">中文</a>
             </div>
-            
+
             <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        
+
         <!-- Mobile Navigation -->
         <div class="mobile-nav" id="mobileNav">
             <ul class="mobile-nav-menu">
@@ -268,7 +271,7 @@
                         Stay updated with the latest developments from Linkou CGMH Burn Center
                     </p>
                 </div>
-                
+
                 <!-- Filter Tabs -->
                 <div class="filter-tabs">
                     <a href="#" class="filter-tab active">All News</a>
@@ -283,6 +286,31 @@
         <!-- News Articles -->
         <section class="section" style="background-color: var(--secondary-color);">
             <div class="container">
+                <!-- News Article - Latest -->
+                <article class="news-article">
+                    <div class="news-meta">
+                        <span class="news-date">January 27, 2026</span>
+                        <span class="news-category">Memorial Event</span>
+                    </div>
+                    <h2 class="news-title">
+                        10th Anniversary of Formosa Fun Coast Dust Explosion & Memorial Service for Dr. Hsiu-Shu Chuang
+                    </h2>
+                    <p class="news-excerpt">
+                        Marking the 10th anniversary of the Formosa Fun Coast dust explosion, Linkou CGMH held a
+                        memorial event on January 27th
+                        themed 'Gratitude, Hope, and Moving Forward.' During the disaster, Linkou CGMH received over 40
+                        patients within four hours,
+                        performed more than 200 surgeries during the acute phase, and achieved a survival rate of over
+                        95%.
+                        The event specially commemorated Dr. Hsiu-Shu Chuang, who passed away in December.
+                        Singer Selina also recorded a video to thank the medical team and pay tribute to all survivors.
+                    </p>
+                    <a href="news-20260127-formosa-memorial.html" class="news-read-more">
+                        Read Full Article
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
                 <!-- News Article 1 -->
                 <article class="news-article">
                     <div class="news-meta">
@@ -293,9 +321,12 @@
                         AI Burn Diagnosis System Officially Implemented in Clinical Practice
                     </h2>
                     <p class="news-excerpt">
-                        Our self-developed vision-driven intelligent burn analysis and prediction system, after two years of clinical trial validation 
-                        with diagnostic accuracy exceeding 95%, has been officially implemented in daily clinical diagnostic procedures. 
-                        This system not only improves diagnostic efficiency but also provides strong diagnostic support for young physicians, 
+                        Our self-developed vision-driven intelligent burn analysis and prediction system, after two
+                        years of clinical trial validation
+                        with diagnostic accuracy exceeding 95%, has been officially implemented in daily clinical
+                        diagnostic procedures.
+                        This system not only improves diagnostic efficiency but also provides strong diagnostic support
+                        for young physicians,
                         marking the entry of burn medicine into a new era of AI-assisted diagnosis.
                     </p>
                     <a href="#" class="news-read-more">
@@ -314,9 +345,12 @@
                         New 3D Printed Personalized Reconstruction Services
                     </h2>
                     <p class="news-excerpt">
-                        To provide more precise personalized medical services, our center officially launched 3D printed personalized reconstruction technology, 
-                        particularly for nasal reconstruction surgery. Through high-precision 3D scanning and modeling technology, 
-                        we create customized surgical guidance templates for each patient, significantly improving surgical precision and success rates 
+                        To provide more precise personalized medical services, our center officially launched 3D printed
+                        personalized reconstruction technology,
+                        particularly for nasal reconstruction surgery. Through high-precision 3D scanning and modeling
+                        technology,
+                        we create customized surgical guidance templates for each patient, significantly improving
+                        surgical precision and success rates
                         while reducing recovery time.
                     </p>
                     <a href="#" class="news-read-more">
@@ -335,9 +369,12 @@
                         2025 International Burn Medicine Symposium Coming Soon
                     </h2>
                     <p class="news-excerpt">
-                        Our center will host the "2025 International Burn Medicine Symposium" from March 15-17, inviting internationally renowned experts 
-                        to share their latest research findings. The conference themes cover AI applications in burn diagnosis, innovative reconstruction techniques, 
-                        new methods for scar treatment, and more. Healthcare professionals in related fields are welcome to register and participate 
+                        Our center will host the "2025 International Burn Medicine Symposium" from March 15-17, inviting
+                        internationally renowned experts
+                        to share their latest research findings. The conference themes cover AI applications in burn
+                        diagnosis, innovative reconstruction techniques,
+                        new methods for scar treatment, and more. Healthcare professionals in related fields are welcome
+                        to register and participate
                         in advancing burn medicine together.
                     </p>
                     <a href="#" class="news-read-more">
@@ -356,9 +393,12 @@
                         Community Burn First Aid Skills Promotion Program Launched
                     </h2>
                     <p class="news-excerpt">
-                        To enhance community residents' knowledge and skills in burn first aid, our center launched the "Community Burn First Aid Skills 
-                        Promotion Program." The program includes free first aid courses, educational material distribution, and online instructional videos. 
-                        It is expected to cover 50 communities in the Taoyuan area within one year, training over 5,000 residents 
+                        To enhance community residents' knowledge and skills in burn first aid, our center launched the
+                        "Community Burn First Aid Skills
+                        Promotion Program." The program includes free first aid courses, educational material
+                        distribution, and online instructional videos.
+                        It is expected to cover 50 communities in the Taoyuan area within one year, training over 5,000
+                        residents
                         to master basic burn first aid skills.
                     </p>
                     <a href="#" class="news-read-more">
@@ -377,9 +417,12 @@
                         Customized Extensor Reconstruction Technology Receives International Patent Certification
                     </h2>
                     <p class="news-excerpt">
-                        Our center's developed "Customized Extensor Mechanism Reconstruction System" has received patent certification from the United States, 
-                        European Union, and Japan. This innovative technology combines precision mechanical design with biomechanical analysis, 
-                        providing personalized treatment solutions for patients with hand dysfunction. Currently, 15 patients have received treatment, 
+                        Our center's developed "Customized Extensor Mechanism Reconstruction System" has received patent
+                        certification from the United States,
+                        European Union, and Japan. This innovative technology combines precision mechanical design with
+                        biomechanical analysis,
+                        providing personalized treatment solutions for patients with hand dysfunction. Currently, 15
+                        patients have received treatment,
                         with hand function recovery rates exceeding 85%.
                     </p>
                     <a href="#" class="news-read-more">
@@ -398,9 +441,12 @@
                         New 24-Hour Burn Hotline Consultation Service
                     </h2>
                     <p class="news-excerpt">
-                        To provide more comprehensive medical services, our center has added a 24-hour burn hotline consultation service, 
-                        staffed by professional nurses providing first aid guidance, wound care advice, and rehabilitation consultation. 
-                        The public can receive immediate professional advice through the hotline, especially detailed guidance 
+                        To provide more comprehensive medical services, our center has added a 24-hour burn hotline
+                        consultation service,
+                        staffed by professional nurses providing first aid guidance, wound care advice, and
+                        rehabilitation consultation.
+                        The public can receive immediate professional advice through the hotline, especially detailed
+                        guidance
                         for home care of minor burns.
                     </p>
                     <a href="#" class="news-read-more">
@@ -408,17 +454,22 @@
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </article>
-                
+
                 <!-- Pagination -->
                 <div style="text-align: center; margin-top: 3rem;">
                     <div style="display: inline-flex; gap: 0.5rem; align-items: center;">
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
                             <i class="fas fa-chevron-left"></i>
                         </a>
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--primary-color); border-radius: 4px; background: var(--primary-color); color: white; text-decoration: none;">1</a>
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">2</a>
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">3</a>
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--primary-color); border-radius: 4px; background: var(--primary-color); color: white; text-decoration: none;">1</a>
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">2</a>
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">3</a>
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
                             <i class="fas fa-chevron-right"></i>
                         </a>
                     </div>
@@ -434,9 +485,10 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Linkou CGMH Burn Center</h3>
-                    <p>Dedicated to clinical burn care, promoting innovative research and applications, providing the highest quality medical services to patients.</p>
+                    <p>Dedicated to clinical burn care, promoting innovative research and applications, providing the
+                        highest quality medical services to patients.</p>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
@@ -447,7 +499,7 @@
                         <li><a href="news-en.html">News</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Contact Information</h3>
                     <ul>
@@ -457,7 +509,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2025 Linkou CGMH Burn Center. All rights reserved.</p>
             </div>
@@ -467,4 +519,5 @@
     <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

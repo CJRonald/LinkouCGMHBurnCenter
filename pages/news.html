@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>最新消息 - 林口長庚燒燙傷中心</title>
     <meta name="description" content="林口長庚燒燙傷中心最新消息，包括醫療服務更新、研究成果發表、學術活動、教育訓練等重要資訊。">
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/main.css">
-    
+
     <!-- Additional styles for news page -->
     <style>
         .news-article {
@@ -24,12 +26,12 @@
             border-left: 4px solid var(--primary-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .news-article:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-hover);
         }
-        
+
         .news-meta {
             display: flex;
             gap: 1.5rem;
@@ -37,7 +39,7 @@
             flex-wrap: wrap;
             align-items: center;
         }
-        
+
         .news-date {
             background: var(--primary-color);
             color: white;
@@ -46,7 +48,7 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        
+
         .news-category {
             background: var(--secondary-color);
             color: var(--primary-color);
@@ -55,7 +57,7 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        
+
         .news-title {
             font-size: 1.5rem;
             font-weight: 600;
@@ -63,13 +65,13 @@
             margin-bottom: 1rem;
             line-height: 1.4;
         }
-        
+
         .news-excerpt {
             color: var(--text-light);
             line-height: 1.7;
             margin-bottom: 1.5rem;
         }
-        
+
         .news-read-more {
             color: var(--primary-color);
             text-decoration: none;
@@ -79,17 +81,17 @@
             gap: 0.5rem;
             transition: color 0.3s ease;
         }
-        
+
         .news-read-more:hover {
             color: var(--primary-dark);
         }
-        
+
         .breadcrumb {
             background: var(--secondary-color);
             padding: 1rem 0;
             margin-top: 80px;
         }
-        
+
         .breadcrumb-nav {
             display: flex;
             align-items: center;
@@ -97,12 +99,12 @@
             font-size: 0.9rem;
             color: var(--text-light);
         }
-        
+
         .breadcrumb a {
             color: var(--primary-color);
             text-decoration: none;
         }
-        
+
         .filter-tabs {
             display: flex;
             gap: 1rem;
@@ -110,7 +112,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        
+
         .filter-tab {
             padding: 0.75rem 1.5rem;
             border: 2px solid var(--border-color);
@@ -121,14 +123,14 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
+
         .filter-tab.active,
         .filter-tab:hover {
             border-color: var(--primary-color);
             background: var(--primary-color);
             color: white;
         }
-        
+
         .news-image {
             width: 100%;
             height: 200px;
@@ -138,6 +140,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -150,7 +153,7 @@
                     <span class="sub">Linkou CGMH Burn Center</span>
                 </div>
             </a>
-            
+
             <!-- Navigation -->
             <nav>
                 <ul class="nav-menu">
@@ -162,19 +165,19 @@
                     <li><a href="news.html">最新消息</a></li>
                 </ul>
             </nav>
-            
+
             <!-- Utility Buttons -->
             <div class="header-utils">
                 <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
                 <a href="news-en.html" class="language-switch">English</a>
             </div>
-            
+
             <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        
+
         <!-- Mobile Navigation -->
         <div class="mobile-nav" id="mobileNav">
             <ul class="mobile-nav-menu">
@@ -268,7 +271,7 @@
                         關注林口長庚燒燙傷中心最新動態
                     </p>
                 </div>
-                
+
                 <!-- Filter Tabs -->
                 <div class="filter-tabs">
                     <a href="#" class="filter-tab active">全部消息</a>
@@ -283,6 +286,27 @@
         <!-- News Articles -->
         <section class="section" style="background-color: var(--secondary-color);">
             <div class="container">
+                <!-- News Article - Latest -->
+                <article class="news-article">
+                    <div class="news-meta">
+                        <span class="news-date">2026年1月27日</span>
+                        <span class="news-category">紀念活動</span>
+                    </div>
+                    <h2 class="news-title">
+                        八仙塵爆十週年紀念暨莊秀樹醫師追思會
+                    </h2>
+                    <p class="news-excerpt">
+                        八仙塵爆事件屆滿十週年，林口長庚醫院於1月27日舉辦「八仙塵爆十週年紀念暨莊秀樹醫師追思會」，
+                        以『感恩、希望、前行』為主軸。當年林口長庚四小時內接收四十餘位傷患，急性期執行超過200台手術，
+                        達成95%以上存活率。活動特別追思去年12月辭世的莊秀樹醫師，緬懷其投入重度燒燙傷與重建醫療的貢獻。
+                        藝人Selina也特別錄製影片感謝醫療團隊，向所有傷友致敬。
+                    </p>
+                    <a href="news-20260127-formosa-memorial.html" class="news-read-more">
+                        閱讀完整內容
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
                 <!-- News Article 1 -->
                 <article class="news-article">
                     <div class="news-meta">
@@ -402,17 +426,22 @@
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </article>
-                
+
                 <!-- Pagination -->
                 <div style="text-align: center; margin-top: 3rem;">
                     <div style="display: inline-flex; gap: 0.5rem; align-items: center;">
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
                             <i class="fas fa-chevron-left"></i>
                         </a>
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--primary-color); border-radius: 4px; background: var(--primary-color); color: white; text-decoration: none;">1</a>
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">2</a>
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">3</a>
-                        <a href="#" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--primary-color); border-radius: 4px; background: var(--primary-color); color: white; text-decoration: none;">1</a>
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">2</a>
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">3</a>
+                        <a href="#"
+                            style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-light); text-decoration: none;">
                             <i class="fas fa-chevron-right"></i>
                         </a>
                     </div>
@@ -430,7 +459,7 @@
                     <h3>林口長庚燒燙傷中心</h3>
                     <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>快速連結</h3>
                     <ul>
@@ -441,7 +470,7 @@
                         <li><a href="news.html">最新消息</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>聯絡資訊</h3>
                     <ul>
@@ -451,7 +480,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
             </div>
@@ -461,4 +490,5 @@
     <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
 </body>
+
 </html>
