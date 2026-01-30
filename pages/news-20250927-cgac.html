@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 長庚美容會議 (CGAC) - 林口長庚燒燙傷中心</title>
+    <meta name="description" content="第十四屆長庚美容會議，以「精通眼部美容手術」為主題，邀請日韓國際大師親臨授課。">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <!-- Additional styles for news detail page -->
+    <style>
+        .news-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .news-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .news-header h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .news-meta-detail {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .news-meta-detail span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .news-content h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .news-content h3 {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .news-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .news-content ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+
+        .news-content li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .news-content strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2c5aa0 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .conference-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .conference-info-item {
+            text-align: center;
+        }
+
+        .conference-info-item .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .conference-info-item .label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            display: block;
+        }
+
+        .conference-info-item .value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .speaker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .speaker-card {
+            background: var(--secondary-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .speaker-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .speaker-card .country {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .speaker-card .topic {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .fee-table th,
+        .fee-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .fee-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .fee-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .fee-table tr:hover {
+            background: var(--secondary-color);
+        }
+
+        .cta-box {
+            background: var(--secondary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-box .btn {
+            margin-top: 1rem;
+        }
+
+        .news-footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .news-source {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .news-source a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/CGMH Logo.svg" alt="長庚醫院 Logo">
+                <div class="logo-text">
+                    <span class="main">林口長庚燒燙傷中心</span>
+                    <span class="sub">Linkou CGMH Burn Center</span>
+                </div>
+            </a>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about">關於我們</a></li>
+                    <li><a href="../index.html#team">醫療團隊</a></li>
+                    <li><a href="../index.html#services">服務項目</a></li>
+                    <li><a href="../index.html#research">研究領域</a></li>
+                    <li><a href="education.html">衛教資訊</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                </ul>
+            </nav>
+
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="news-en.html" class="language-switch">English</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-menu">
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index.html#about" class="mobile-menu-link">關於我們</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index.html#team" class="mobile-menu-link">醫療團隊</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index.html#services" class="mobile-menu-link">服務項目</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../index.html#research" class="mobile-menu-link">研究領域</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="education.html" class="mobile-menu-link">衛教資訊</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="news.html" class="mobile-menu-link">最新消息</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-utils">
+                <a href="../index.html#contact" class="btn btn-outline">聯絡我們</a>
+                <a href="news-en.html" class="language-switch">English</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">首頁</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="news.html">最新消息</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>學術活動</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="news-detail">
+                <!-- News Header -->
+                <div class="news-header">
+                    <h1>2025 長庚美容會議 (CGAC)：精通眼部美容手術</h1>
+                    <div class="news-meta-detail">
+                        <span><i class="fas fa-calendar-alt"></i> 2025年9月27-28日</span>
+                        <span><i class="fas fa-map-marker-alt"></i> 林口長庚紀念醫院研究大樓</span>
+                        <span><i class="fas fa-tag"></i> 學術活動</span>
+                    </div>
+                </div>
+
+                <!-- Conference Highlight Box -->
+                <div class="highlight-box">
+                    <h3>第十四屆長庚美容會議</h3>
+                    <p style="margin-bottom: 1.5rem; opacity: 0.95;">Mastering Aesthetic Eye Surgery</p>
+                    <div class="conference-info">
+                        <div class="conference-info-item">
+                            <div class="icon"><i class="fas fa-calendar-day"></i></div>
+                            <span class="label">會議日期</span>
+                            <span class="value">9/27-28, 2025</span>
+                        </div>
+                        <div class="conference-info-item">
+                            <div class="icon"><i class="fas fa-building"></i></div>
+                            <span class="label">會議地點</span>
+                            <span class="value">林口長庚國際會議廳</span>
+                        </div>
+                        <div class="conference-info-item">
+                            <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                            <span class="label">國際講者</span>
+                            <span class="value">日本、韓國</span>
+                        </div>
+                        <div class="conference-info-item">
+                            <div class="icon"><i class="fas fa-user-md"></i></div>
+                            <span class="label">國內講者</span>
+                            <span class="value">16 位專家</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Content -->
+                <div class="news-content">
+                    <h2>會議簡介</h2>
+                    <p>
+                        隨著醫學美容技術的日新月異，眼部整形手術始終是亞洲乃至全球需求量最高、挑戰性也最具深度的領域之一。
+                        為了引領此領域的技術革新，享譽國際的林口長庚紀念醫院整形外科宣布，將於
+                        <strong>2025年9月27日至28日</strong>，假林口長庚紀念醫院研究大樓國際會議廳，
+                        盛大舉辦<strong>「第十四屆長庚美容會議」</strong>。
+                    </p>
+                    <p>
+                        本次會議以<strong>「Mastering Aesthetic Eye Surgery（精通眼部美容手術）」</strong>為年度主題，
+                        旨在透過為期兩天的密集學術研討，深入探討眼周美學與重建手術的最新進展。
+                        會議不僅邀請了來自日本與韓國的國際大師親臨授課，更集結了國內16位頂尖整形外科專家，
+                        透過「全視訊手術示範（Video Demonstration）」的實戰教學模式，從基礎理論到高階修復，全方位解析眼整形的奧秘。
+                    </p>
+
+                    <h2>核心主題涵蓋</h2>
+                    <ul>
+                        <li><strong>眼瞼整形術（Blepharoplasty）：</strong>上眼瞼與下眼瞼的美容手術</li>
+                        <li><strong>眼瞼下垂矯正（Ptosis Correction）：</strong>功能性與美觀性兼具的提眼瞼肌手術</li>
+                        <li><strong>眥角成形術（Canthoplasty）：</strong>開眼頭或開眼尾，調整眼型比例</li>
+                        <li><strong>臥蠶手術（Pretarsal Fullness）：</strong>重建年輕象徵的臥蠶</li>
+                        <li><strong>眼瞼下置手術（Lower Eyelid Lowering）：</strong>追求特定眼型美感的進階術式</li>
+                        <li><strong>修正性手術（Revisional Surgery）：</strong>二次手術、併發症處理及失敗案例救援</li>
+                        <li><strong>AI 輔助技術：</strong>人工智慧輔助術前評估與模擬術後效果</li>
+                    </ul>
+
+                    <h2>國際講者</h2>
+                    <div class="speaker-grid">
+                        <div class="speaker-card">
+                            <h4>Dr. Eiko Tanaka（田中英子 醫師）</h4>
+                            <div class="country"><i class="fas fa-flag"></i> 日本｜湘南美容診所高槻院院長</div>
+                            <div class="topic">「Aesthetic Approaches to Upper Eyelid Laxity」<br>上眼瞼鬆弛的美容手術策略</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>Dr. Seung Han Song（宋承漢 教授）</h4>
+                            <div class="country"><i class="fas fa-flag"></i> 韓國｜忠南大學醫院整形外科教授</div>
+                            <div class="topic">「The Evolution of Eyelid Surgery with Innovative AI
+                                Tools」<br>眼瞼手術的演進與創新AI工具</div>
+                        </div>
+                    </div>
+
+                    <h2>國內講者陣容（部分）</h2>
+                    <div class="speaker-grid">
+                        <div class="speaker-card">
+                            <h4>陳宏彰醫師</h4>
+                            <div class="topic">下眼瞼退縮與外翻的矯正</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>荊偉政醫師</h4>
+                            <div class="topic">經結膜入路之下眼瞼下置術</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>陳韋農醫師</h4>
+                            <div class="topic">重修上眼瞼手術：從諮詢到實作</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>蕭奕君醫師</h4>
+                            <div class="topic">經結膜脂肪轉位術</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>林才民醫師</h4>
+                            <div class="topic">眼袋與淚溝管理的階梯式策略</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>廖漢聰醫師</h4>
+                            <div class="topic">下眼瞼與中臉年輕化</div>
+                        </div>
+                    </div>
+
+                    <h2>報名費用</h2>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>身分類別</th>
+                                <th>費用（新台幣）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>長庚整形外科系友</td>
+                                <td>$15,000</td>
+                            </tr>
+                            <tr>
+                                <td>住院醫師或研究員</td>
+                                <td>$10,000</td>
+                            </tr>
+                            <tr>
+                                <td>整形外科/眼科專科醫師</td>
+                                <td>$20,000</td>
+                            </tr>
+                            <tr>
+                                <td>2025 長庚論壇參加者</td>
+                                <td>$18,000</td>
+                            </tr>
+                            <tr>
+                                <td>其他身分 / 現場報名</td>
+                                <td>$25,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>會議地點與交通</h2>
+                    <p>
+                        <strong>地點：</strong>林口長庚紀念醫院 研究大樓 國際會議廳<br>
+                        <strong>地址：</strong>桃園市龜山區復興街5號<br>
+                        <strong>交通：</strong>鄰近桃園機場捷運 A8 長庚醫院站，交通極為便利
+                    </p>
+
+                    <div class="cta-box">
+                        <h3>立即報名參加</h3>
+                        <p>切勿錯過這場與國際大師面對面交流的絕佳機會！</p>
+                        <a href="https://www.cgprs.org/" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> 前往官方網站報名
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Footer -->
+                <div class="news-footer">
+                    <div class="news-source">
+                        <i class="fas fa-link"></i>
+                        官方網站：<a href="https://www.cgprs.org/" target="_blank">www.cgprs.org</a>
+                    </div>
+                    <a href="news.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i> 返回最新消息
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>林口長庚燒燙傷中心</h3>
+                    <p>致力於臨床燒燙傷照護，推動創新研究與應用，為患者提供最優質的醫療服務。</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>快速連結</h3>
+                    <ul>
+                        <li><a href="../index.html#about">關於我們</a></li>
+                        <li><a href="../index.html#services">服務項目</a></li>
+                        <li><a href="../index.html#research">研究領域</a></li>
+                        <li><a href="education.html">衛教資訊</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>聯絡資訊</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>電話: +886-3-328-1200 ext. 3221</li>
+                        <li>地址: 桃園市龜山區復興街5號</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 林口長庚燒燙傷中心。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
