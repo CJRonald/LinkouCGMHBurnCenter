@@ -94,3 +94,17 @@ yarn-error.log*
 *.zip
 *.tar.gz
 *.rar
+
+# =========================
+# Documentation (Private)
+# =========================
+
+# All markdown files - keep local only
+*.md
+
+# =========================
+# Publications (Copyright)
+# =========================
+
+# PDF files in publications folder - copyright concerns
+assets/publications/**/*.pdf
