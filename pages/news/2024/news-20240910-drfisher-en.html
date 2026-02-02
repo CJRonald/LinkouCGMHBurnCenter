@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mark Fisher Visits Linkou CGMH - Burn Center</title>
+    <meta name="description"
+        content="Prof. Mark Fisher from Johns Hopkins Hospital visited Linkou CGMH Burn Center for academic exchange.">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <style>
+        .news-detail {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .news-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .news-header h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .news-meta-detail {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .news-meta-detail span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .news-content h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .news-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .news-content strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .speaker-box {
+            background: var(--secondary-color);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .speaker-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-topics {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .highlight-topic {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .highlight-topic i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .highlight-topic .title {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .highlight-topic .desc {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .news-footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .news-content img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="../../../index-en.html" class="logo">
+                <img src="../../../assets/images/logos/CGMH Logo.svg" alt="CGMH Logo">
+                <div class="logo-text">
+                    <span class="main">Linkou Chang Gung Memorial Hospital</span>
+                    <span class="main">Plastic Surgery & Burn Center</span>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../../../index-en.html#about">About Us</a></li>
+                    <li><a href="../../../index-en.html#team">Medical Team</a></li>
+                    <li><a href="../../../index-en.html#services">Services</a></li>
+                    <li><a href="../../../index-en.html#research">Research</a></li>
+                    <li><a href="../../education-en.html">Patient Education</a></li>
+                    <li><a href="../../news-en.html">News</a></li>
+                </ul>
+            </nav>
+            <div class="header-utils">
+                <a href="../../../index-en.html#contact" class="btn btn-outline">Contact Us</a>
+                <a href="news-20240910-drfisher.html" class="language-switch">中文</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../../../index-en.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../../news-en.html">News</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>International Exchange</span>
+            </nav>
+        </div>
+    </section>
+
+    <main>
+        <section class="section">
+            <div class="news-detail">
+                <div class="news-header">
+                    <h1>International Burn Reconstruction Expert Dr. Mark Fisher Visits Linkou CGMH Burn Center</h1>
+                    <div class="news-meta-detail">
+                        <span><i class="fas fa-calendar-alt"></i> September 10, 2024</span>
+                        <span><i class="fas fa-building"></i> Linkou CGMH</span>
+                        <span><i class="fas fa-tag"></i> International Exchange</span>
+                    </div>
+                </div>
+
+                <div class="news-content">
+                    <img src="../../../assets/news/2024/20240910_DrFisher_Visiting/01_GroupPhoto.jpg"
+                        alt="Dr. Fisher with Linkou CGMH Burn Center Team">
+
+                    <p><strong>Prof. Mark Fisher</strong>, a renowned authority in burn and head-neck reconstruction
+                        from The Johns Hopkins Hospital, visited Linkou CGMH Burn Center for an in-depth academic
+                        exchange. The visit was accompanied by <strong>Dr. Hui-Fu Huang</strong>, President of the
+                        Taiwan Society of Burn Injury and Wound Care, marking an important milestone in Taiwan-US burn
+                        medicine cooperation.</p>
+
+                    <div class="highlight-box">
+                        <h3>Lecture Highlights</h3>
+                        <div class="highlight-topics">
+                            <div class="highlight-topic">
+                                <i class="fas fa-hand-holding-medical"></i>
+                                <span class="title">Free Flap Surgery</span>
+                                <span class="desc">Clinical Applications in Burn Reconstruction</span>
+                            </div>
+                            <div class="highlight-topic">
+                                <i class="fas fa-child"></i>
+                                <span class="title">Pediatric Burn Reconstruction</span>
+                                <span class="desc">Psychological Support Across Age Groups</span>
+                            </div>
+                            <div class="highlight-topic">
+                                <i class="fas fa-microscope"></i>
+                                <span class="title">Microsurgical Techniques</span>
+                                <span class="desc">Achieving Optimal Reconstruction Outcomes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Featured Lecture: Free Flap Surgery & Pediatric Burn Reconstruction</h2>
+                    <p>As the current <strong>Chair of the Reconstruction Committee of the American Burn
+                            Association</strong>, Dr. Fisher delivered a featured lecture covering the application of
+                        Free Flap Surgery in burn reconstruction, sharing the latest surgical techniques and clinical
+                        experience.</p>
+
+                    <h2>Ward Visits: International Recognition</h2>
+                    <p>Dr. Fisher visited the burn ICU and general wards, highly praising our center's quality of care.
+                        He particularly acknowledged the outstanding achievements in <strong>microsurgical flap
+                            surgery</strong>, recognizing it as a leading standard in burn care across the Asia-Pacific
+                        region.</p>
+
+                    <h2>About Dr. Mark Fisher</h2>
+                    <div class="speaker-box">
+                        <h3>Dr. Mark Fisher</h3>
+                        <p>Dr. Mark Fisher is an internationally renowned burn reconstruction surgeon, serving as Chair
+                            of the Reconstruction Committee of the American Burn Association at Johns Hopkins Hospital.
+                            With over twenty years of experience, he specializes in complex burn scar reconstruction,
+                            free flap surgery, and head-neck reconstruction.</p>
+                    </div>
+
+                    <h2>Future Collaboration</h2>
+                    <p>This visit strengthened Taiwan-US academic exchange in burn medicine and laid a solid foundation
+                        for future international collaboration. Linkou CGMH Burn Center will continue to enhance care
+                        quality and align with international standards.</p>
+                </div>
+
+                <div class="news-footer">
+                    <div></div>
+                    <a href="../../news-en.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to News</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Linkou CGMH Burn Center</h3>
+                    <p>Dedicated to clinical burn care and innovative research.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../../../index-en.html#about">About Us</a></li>
+                        <li><a href="../../news-en.html">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>Phone: +886-3-328-1200 ext. 3221</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Linkou CGMH Burn Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../assets/js/main.js"></script>
+</body>
+
+</html>

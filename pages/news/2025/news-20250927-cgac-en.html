@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Chang Gung Aesthetics Conference (CGAC) - Linkou CGMH Burn Center</title>
+    <meta name="description"
+        content="The 14th Chang Gung Aesthetics Conference, themed 'Mastering Aesthetic Eye Surgery', featuring international masters from Japan and Korea.">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+
+    <!-- Additional styles for news detail page -->
+    <style>
+        .news-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .news-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .news-header h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .news-meta-detail {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .news-meta-detail span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .news-content h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .news-content h3 {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .news-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .news-content ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+
+        .news-content li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .news-content strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2c5aa0 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .conference-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .conference-info-item {
+            text-align: center;
+        }
+
+        .conference-info-item .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .conference-info-item .label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            display: block;
+        }
+
+        .conference-info-item .value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .speaker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .speaker-card {
+            background: var(--secondary-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .speaker-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .speaker-card .country {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .speaker-card .topic {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .fee-table th,
+        .fee-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .fee-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .fee-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .fee-table tr:hover {
+            background: var(--secondary-color);
+        }
+
+        .cta-box {
+            background: var(--secondary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-box .btn {
+            margin-top: 1rem;
+        }
+
+        .news-footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .news-source {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .news-source a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../../../index-en.html" class="logo">
+                <img src="../../../assets/images/logos/CGMH Logo.svg" alt="CGMH Logo">
+                <div class="logo-text">
+                    <span class="main">Linkou Chang Gung Memorial Hospital</span>
+                    <span class="main">Plastic Surgery & Burn Center</span>
+                </div>
+            </a>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../../../index-en.html#about">About Us</a></li>
+                    <li><a href="../../../index-en.html#team">Medical Team</a></li>
+                    <li><a href="../../../index-en.html#services">Services</a></li>
+                    <li><a href="../../../index-en.html#research">Research</a></li>
+                    <li><a href="../../education-en.html">Patient Education</a></li>
+                    <li><a href="../../news-en.html">News</a></li>
+                </ul>
+            </nav>
+
+            <!-- Utility Buttons -->
+            <div class="header-utils">
+                <a href="../../../index-en.html#contact" class="btn btn-outline">Contact Us</a>
+                <a href="news-20250927-cgac.html" class="language-switch">中文</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-menu">
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../../../index-en.html#about" class="mobile-menu-link">About Us</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../../../index-en.html#team" class="mobile-menu-link">Medical Team</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../../../index-en.html#services" class="mobile-menu-link">Services</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../../../index-en.html#research" class="mobile-menu-link">Research</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../../education-en.html" class="mobile-menu-link">Patient Education</a>
+                    </div>
+                </li>
+                <li class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="../../news-en.html" class="mobile-menu-link">News</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-utils">
+                <a href="../../../index-en.html#contact" class="btn btn-outline">Contact Us</a>
+                <a href="news-20250927-cgac.html" class="language-switch">中文</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../../../index-en.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../../news-en.html">News</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Academic Events</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="news-detail">
+                <!-- News Header -->
+                <div class="news-header">
+                    <h1>2025 Chang Gung Aesthetics Conference (CGAC): Mastering Aesthetic Eye Surgery</h1>
+                    <div class="news-meta-detail">
+                        <span><i class="fas fa-calendar-alt"></i> September 27-28, 2025</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Linkou CGMH Research Building</span>
+                        <span><i class="fas fa-tag"></i> Academic Events</span>
+                    </div>
+                </div>
+
+                <!-- News Content -->
+                <div class="news-content">
+                    <img src="../../../assets/news/2025/20250927_長庚美容會議/02_CGAC_poster.png" alt="2025 CGAC Poster"
+                        style="width: 100%; max-width: 100%; height: auto; border-radius: 12px; margin: 0 0 2rem 0; box-shadow: var(--shadow);">
+
+                    <h2>Conference Overview</h2>
+                    <p>
+                        As aesthetic medical technology continues to advance, eyelid surgery remains one of the most
+                        demanding and technically challenging fields in Asia and worldwide. To lead the innovation in
+                        this field, the internationally renowned Linkou Chang Gung Memorial Hospital Department of
+                        Plastic Surgery announces the <strong>14th Chang Gung Aesthetics Conference</strong>,
+                        to be held on <strong>September 27-28, 2025</strong> at the International Conference Hall of
+                        Linkou CGMH Research Building.
+                    </p>
+                    <p>
+                        This conference, themed <strong>"Mastering Aesthetic Eye Surgery"</strong>, aims to explore
+                        the latest advances in periocular aesthetics and reconstructive surgery through a two-day
+                        intensive academic symposium. The conference features international masters from Japan and
+                        Korea,
+                        along with 16 top domestic plastic surgery experts, delivering hands-on teaching through
+                        comprehensive video surgical demonstrations covering everything from basic theory to advanced
+                        repair.
+                    </p>
+
+                    <!-- Conference Highlight Box -->
+                    <div class="highlight-box">
+                        <h3>14th Chang Gung Aesthetics Conference</h3>
+                        <div class="conference-info">
+                            <div class="conference-info-item">
+                                <div class="icon"><i class="fas fa-calendar-day"></i></div>
+                                <span class="label">Conference Dates</span>
+                                <span class="value">Sep 27-28, 2025</span>
+                            </div>
+                            <div class="conference-info-item">
+                                <div class="icon"><i class="fas fa-building"></i></div>
+                                <span class="label">Venue</span>
+                                <span class="value">Linkou CGMH</span>
+                            </div>
+                            <div class="conference-info-item">
+                                <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                                <span class="label">International Speakers</span>
+                                <span class="value">Japan, Korea</span>
+                            </div>
+                            <div class="conference-info-item">
+                                <div class="icon"><i class="fas fa-user-md"></i></div>
+                                <span class="label">Domestic Speakers</span>
+                                <span class="value">16 Experts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Core Topics</h2>
+                    <ul>
+                        <li><strong>Blepharoplasty:</strong> Upper and lower eyelid aesthetic surgery</li>
+                        <li><strong>Ptosis Correction:</strong> Functional and aesthetic levator muscle surgery</li>
+                        <li><strong>Canthoplasty:</strong> Medial and lateral canthal adjustments for eye shape
+                            optimization</li>
+                        <li><strong>Pretarsal Fullness:</strong> Restoring youthful aegyo-sal appearance</li>
+                        <li><strong>Lower Eyelid Lowering:</strong> Advanced techniques for specific aesthetic goals
+                        </li>
+                        <li><strong>Revisional Surgery:</strong> Secondary surgery, complication management, and case
+                            rescue</li>
+                        <li><strong>AI-Assisted Technology:</strong> Artificial intelligence for preoperative assessment
+                            and outcome simulation</li>
+                    </ul>
+
+                    <h2>International Speakers</h2>
+                    <div class="speaker-grid">
+                        <div class="speaker-card">
+                            <h4>Dr. Eiko Tanaka</h4>
+                            <div class="country"><i class="fas fa-flag"></i> Japan | Director, SBC Takatsuki Clinic
+                            </div>
+                            <div class="topic">"Aesthetic Approaches to Upper Eyelid Laxity"</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>Dr. Seung Han Song</h4>
+                            <div class="country"><i class="fas fa-flag"></i> Korea | Professor, Chungnam National
+                                University Hospital</div>
+                            <div class="topic">"The Evolution of Eyelid Surgery with Innovative AI Tools"</div>
+                        </div>
+                    </div>
+
+                    <h2>Domestic Speakers (Selected)</h2>
+                    <div class="speaker-grid">
+                        <div class="speaker-card">
+                            <h4>Dr. Hung-Chang Chen</h4>
+                            <div class="topic">Lower Eyelid Retraction and Ectropion Correction</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>Dr. Wei-Jeng Jeng</h4>
+                            <div class="topic">Transconjunctival Lower Eyelid Lowering</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>Dr. Wei-Nong Chen</h4>
+                            <div class="topic">Revision Upper Eyelid Surgery: Consultation to Execution</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>Dr. Yi-Chun Hsiao</h4>
+                            <div class="topic">Transconjunctival Fat Repositioning</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>Dr. Tsai-Ming Lin</h4>
+                            <div class="topic">Stepwise Strategy for Eye Bag and Tear Trough Management</div>
+                        </div>
+                        <div class="speaker-card">
+                            <h4>Dr. Han-Tsung Liao</h4>
+                            <div class="topic">Lower Eyelid and Midface Rejuvenation</div>
+                        </div>
+                    </div>
+
+                    <h2>Registration Fees</h2>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Fee (NTD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chang Gung Plastic Surgery Alumni</td>
+                                <td>$15,000</td>
+                            </tr>
+                            <tr>
+                                <td>Residents or Fellows</td>
+                                <td>$10,000</td>
+                            </tr>
+                            <tr>
+                                <td>Plastic Surgery / Ophthalmology Specialists</td>
+                                <td>$20,000</td>
+                            </tr>
+                            <tr>
+                                <td>2025 Chang Gung Forum Participants</td>
+                                <td>$18,000</td>
+                            </tr>
+                            <tr>
+                                <td>Others / On-site Registration</td>
+                                <td>$25,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Venue & Transportation</h2>
+                    <p>
+                        <strong>Venue:</strong> Linkou Chang Gung Memorial Hospital, Research Building, International
+                        Conference Hall<br>
+                        <strong>Address:</strong> No. 5, Fuxing Street, Guishan District, Taoyuan City<br>
+                        <strong>Transportation:</strong> Adjacent to Taoyuan Airport MRT A8 Chang Gung Memorial Hospital
+                        Station
+                    </p>
+
+                    <img src="../../../assets/news/2025/20250927_長庚美容會議/01_.jpg" alt="Linkou CGMH Research Building"
+                        style="width: 100%; max-width: 100%; height: auto; border-radius: 12px; margin: 1.5rem 0; box-shadow: var(--shadow);">
+
+                    <div class="cta-box">
+                        <h3>Register Now</h3>
+                        <p>Don't miss this exceptional opportunity to learn from international masters!</p>
+                        <a href="https://www.cgprs.org/" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visit Official Website
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Footer -->
+                <div class="news-footer">
+                    <div class="news-source">
+                        <i class="fas fa-link"></i>
+                        Official Website: <a href="https://www.cgprs.org/" target="_blank">www.cgprs.org</a>
+                    </div>
+                    <a href="../../news-en.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i> Back to News
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Linkou CGMH Burn Center</h3>
+                    <p>Dedicated to clinical burn care, innovative research, and providing the highest quality medical
+                        services.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../../../index-en.html#about">About Us</a></li>
+                        <li><a href="../../../index-en.html#services">Services</a></li>
+                        <li><a href="../../../index-en.html#research">Research</a></li>
+                        <li><a href="../../education-en.html">Patient Education</a></li>
+                        <li><a href="../../news-en.html">News</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:cgmh.burncenter@gmail.com">cgmh.burncenter@gmail.com</a></li>
+                        <li>Phone: +886-3-328-1200 ext. 3221</li>
+                        <li>Address: No. 5, Fuxing Street, Guishan District, Taoyuan City</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Linkou CGMH Burn Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../assets/js/main.js"></script>
+</body>
+
+</html>
