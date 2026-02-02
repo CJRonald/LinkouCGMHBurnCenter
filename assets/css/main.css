@@ -37,10 +37,6 @@ html[lang="en"] .logo-text .main {
   white-space: nowrap;
 }
 
-html[lang="en"] .logo-text .sub {
-  font-size: 0.8rem;
-}
-
 html[lang="en"] .nav-menu {
   gap: 2rem;
 }
@@ -49,17 +45,15 @@ html[lang="en"] .header-utils {
   gap: 1rem;
 }
 
+html[lang="en"] .hero h1 {
+  font-size: 3.0rem;
+}
+
 /* English version mobile adjustments */
 @media (max-width: 768px) {
   html[lang="en"] .logo-text .main {
     font-size: 0.85rem;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  html[lang="en"] .logo-text .sub {
-    font-size: 0.6rem;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -83,9 +77,6 @@ html[lang="en"] .header-utils {
     font-size: 0.75rem;
   }
   
-  html[lang="en"] .logo-text .sub {
-    font-size: 0.55rem;
-  }
 }
 
 .container {
@@ -128,22 +119,21 @@ html[lang="en"] .header-utils {
 }
 
 .logo-text {
-  font-size: 1.4rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .logo-text .main {
   display: block;
+  font-size: 1.2rem;
   color: var(--primary-color);
 }
 
 .logo-text .sub {
   display: block;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-light);
-  margin-top: -2px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-color) !important;
 }
 
 /* Navigation */
@@ -504,7 +494,7 @@ html[lang="en"] .header-utils {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -741,9 +731,6 @@ html[lang="en"] .header-utils {
     font-size: 1.2rem;
   }
   
-  .logo-text .sub {
-    font-size: 0.8rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -785,14 +772,6 @@ html[lang="en"] .header-utils {
   
   .logo-text .main {
     font-size: 1rem;
-    line-height: 1.1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .logo-text .sub {
-    font-size: 0.7rem;
     line-height: 1.1;
     white-space: nowrap;
     overflow: hidden;
@@ -857,10 +836,6 @@ html[lang="en"] .header-utils {
   
   .logo-text .main {
     font-size: 0.9rem;
-  }
-  
-  .logo-text .sub {
-    font-size: 0.65rem;
   }
   
   .hero h1 {
