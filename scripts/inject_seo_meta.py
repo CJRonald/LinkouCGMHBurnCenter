@@ -5,6 +5,11 @@ For each page in seo_metadata.PAGES:
 - Inserts the standardized set right before </head>
 - Preserves existing <title>, charset, viewport, description, keywords
 
+Note: BeautifulSoup's html.parser will normalize existing tags on first run
+(attribute order alphabetized, self-closing slashes added, charset case folded).
+This is expected and harmless — subsequent runs are byte-stable. Review the
+first commit's diff with this in mind; the SEO additions are at the end of <head>.
+
 Usage:
     python3 scripts/inject_seo_meta.py [--dry-run] [--file PATH]
 """
@@ -13,7 +18,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 
 # Allow running as `python3 scripts/inject_seo_meta.py`
 sys.path.insert(0, str(Path(__file__).parent))
@@ -41,6 +46,10 @@ def remove_owned_tags(soup: BeautifulSoup) -> None:
         raise RuntimeError("HTML missing <head>")
     for sel in OWNED_SELECTORS:
         for tag in head.find_all(sel["name"], attrs=sel["attrs"]):
+            # Remove the trailing whitespace-only text node we may have inserted
+            next_sibling = tag.next_sibling
+            if isinstance(next_sibling, NavigableString) and not next_sibling.strip():
+                next_sibling.extract()
             tag.decompose()
 
 
