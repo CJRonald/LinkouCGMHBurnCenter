@@ -23,9 +23,6 @@ def priority_for(rel_path: str) -> str:
 def changefreq_for(rel_path: str) -> str:
     if rel_path.startswith("pages/news/"):
         return "yearly"
-    if rel_path in ("pages/news.html", "pages/news-en.html",
-                    "pages/publications.html", "pages/publications-en.html"):
-        return "monthly"
     return "monthly"
 
 
