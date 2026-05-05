@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow tooling/internal paths
+Disallow: /scripts/
+Disallow: /docs/
+
+Sitemap: https://cgmhburncenter.org/sitemap.xml
