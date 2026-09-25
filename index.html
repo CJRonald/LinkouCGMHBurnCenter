@@ -208,20 +208,8 @@
         @media (max-width: 768px) { .hero-slide-card { max-width: none; padding: 1.5rem; } .hero-arrow { width: 36px; height: 36px; font-size: 0.9rem; } }
     </style>
 <div aria-label="最新活動輪播" class="hero-carousel" id="heroCarousel">
-<!-- Slide 1: Noordhoff Day -->
-<div class="hero-slide active">
-<div class="hero-slide-bg" style="background-image: url('assets/news/2026/20260627_NoordhoffDay/02_NoordhoffDay_banner.jpg');"></div>
-<div class="hero-slide-content">
-<div class="hero-slide-card">
-<span class="tag">學術活動</span>
-<h3>Noordhoff Day 2026 暨 7th PRS Research Day</h3>
-<p>6/27-28 研究大樓國際會議廳登場，適逢長庚整形外科創科50週年金禧，系友大團圓暨第七屆 PRS Research Day，誠摯邀請科內同仁與系友共襄盛舉。</p>
-<a class="read-more" href="pages/news/2026/news-20260627-noordhoffday.html">閱讀完整內容 <i class="fas fa-arrow-right"></i></a>
-</div>
-</div>
-</div>
-<!-- Slide 2: CGAC 2026 -->
-<div class="hero-slide">
+<!-- Slide: CGAC 2026 (10/30-31) -->
+<div class="hero-slide active" data-end="2026-10-31">
 <div class="hero-slide-bg" style="background-image: url('assets/news/2026/20261030_CGAC2026_Facelift/02_CGAC2026_banner.jpg');"></div>
 <div class="hero-slide-content">
 <div class="hero-slide-card">
@@ -232,46 +220,71 @@
 </div>
 </div>
 </div>
-<!-- Slide 3: Master Course -->
-<div class="hero-slide">
+<!-- Slide: Master Course (11/1) -->
+<div class="hero-slide" data-end="2026-11-01">
 <div class="hero-slide-bg" style="background-image: url('assets/news/2026/20261101_MasterCourse_DeepPlane/02_MasterCourse_banner.jpg');"></div>
 <div class="hero-slide-content">
 <div class="hero-slide-card">
 <span class="tag">教育訓練</span>
 <h3>2026 Master Course：Deep Plane Facelift × Upper Blepharoplasty × Threadlift</h3>
-<p>11/1 於長庚外科訓練暨研究中心 (STARC) 舉辦，大體解剖實作課程，主題涵蓋深層平面拉皮、上眼瞼整形與線雕，早鳥優惠至 6/30。</p>
+<p>11/1 於長庚外科訓練暨研究中心 (STARC) 舉辦，大體解剖實作課程，主題涵蓋深層平面拉皮、上眼瞼整形與線雕。</p>
 <a class="read-more" href="pages/news/2026/news-20261101-mastercourse.html">閱讀完整內容 <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+<!-- Slide: Sunshine Foundation CMN lecture (11/15) -->
+<div class="hero-slide" data-end="2026-11-15">
+<div class="hero-slide-bg" style="background-image: url('assets/news/2026/20261115_Sunshine_CMNLecture/02_CMNLecture_banner.jpg'); background-position: left center;"></div>
+<div class="hero-slide-content">
+<div class="hero-slide-card">
+<span class="tag">醫療服務</span>
+<h3>黑色素痣治療照護與病友交流講座</h3>
+<p>11/15（日）於陽光基金會舉辦，本中心一般整形外科主任顏琤嬑醫師與諮商心理師主講，從治療選擇、術後疤痕照顧到陪伴孩子建立自信。報名至 11/10。</p>
+<a class="read-more" href="pages/news/2026/news-20261115-sunshine-cmn-lecture.html">閱讀完整內容 <i class="fas fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
 <!-- Controls -->
 <button aria-label="上一則" class="hero-arrow prev" type="button"><i class="fas fa-chevron-left"></i></button>
 <button aria-label="下一則" class="hero-arrow next" type="button"><i class="fas fa-chevron-right"></i></button>
-<div class="hero-dots">
-<button aria-label="第 1 則" class="hero-dot active" type="button"></button>
-<button aria-label="第 2 則" class="hero-dot" type="button"></button>
-<button aria-label="第 3 則" class="hero-dot" type="button"></button>
-</div>
+<div class="hero-dots"></div>
 </div>
 <script>
         (function () {
             var carousel = document.getElementById('heroCarousel');
             if (!carousel) return;
+            // Event slides carry data-end (last event day, YYYY-MM-DD); drop them once the day has passed.
+            var d = new Date();
+            var today = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+            carousel.querySelectorAll('.hero-slide[data-end]').forEach(function (s) {
+                if (s.getAttribute('data-end') < today) s.parentNode.removeChild(s);
+            });
             var slides = carousel.querySelectorAll('.hero-slide');
-            var dots = carousel.querySelectorAll('.hero-dot');
+            // No upcoming events: hide the whole carousel instead of leaving an empty box.
+            if (!slides.length) { carousel.style.display = 'none'; return; }
             var prev = carousel.querySelector('.hero-arrow.prev');
             var next = carousel.querySelector('.hero-arrow.next');
+            var dotsWrap = carousel.querySelector('.hero-dots');
+            dotsWrap.innerHTML = '';
+            slides.forEach(function (s, idx) {
+                var b = document.createElement('button');
+                b.type = 'button';
+                b.className = 'hero-dot';
+                b.setAttribute('aria-label', '第 ' + (idx + 1) + ' 則');
+                dotsWrap.appendChild(b);
+            });
+            var dots = dotsWrap.querySelectorAll('.hero-dot');
             var current = 0, timer = null, INTERVAL = 5000;
-
             function show(i) {
                 current = (i + slides.length) % slides.length;
                 slides.forEach(function (s, idx) { s.classList.toggle('active', idx === current); });
                 dots.forEach(function (d, idx) { d.classList.toggle('active', idx === current); });
             }
+            show(0);
+            if (slides.length === 1) { prev.style.display = 'none'; next.style.display = 'none'; dotsWrap.style.display = 'none'; return; }
             function nextSlide() { show(current + 1); }
             function start() { stop(); timer = setInterval(nextSlide, INTERVAL); }
             function stop() { if (timer) { clearInterval(timer); timer = null; } }
-
             next.addEventListener('click', function () { nextSlide(); start(); });
             prev.addEventListener('click', function () { show(current - 1); start(); });
             dots.forEach(function (d, idx) { d.addEventListener('click', function () { show(idx); start(); }); });
