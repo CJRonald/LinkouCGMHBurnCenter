@@ -289,4 +289,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cgmhburncenter.org/pages/news/2026/news-20261101-mastercourse-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cgmhburncenter.org/pages/news/2026/news-20261101-mastercourse.html"/>
   </url>
+  <url>
+    <loc>https://cgmhburncenter.org/pages/education/articles/scar-laser.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://cgmhburncenter.org/pages/education/articles/scar-laser.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cgmhburncenter.org/pages/education/articles/scar-laser-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cgmhburncenter.org/pages/education/articles/scar-laser.html"/>
+  </url>
+  <url>
+    <loc>https://cgmhburncenter.org/pages/education/articles/scar-laser-en.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://cgmhburncenter.org/pages/education/articles/scar-laser.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cgmhburncenter.org/pages/education/articles/scar-laser-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cgmhburncenter.org/pages/education/articles/scar-laser.html"/>
+  </url>
 </urlset>
