@@ -184,7 +184,7 @@ html[lang="en"] .hero h1 {
   top: 100%;
   left: 0;
   background: white;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: var(--shadow-hover);
   padding: 1rem 0;
   min-width: 200px;
