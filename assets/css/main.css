@@ -155,6 +155,7 @@ html[lang="en"] .hero h1 {
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 0;
+  white-space: nowrap;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -194,7 +195,8 @@ html[lang="en"] .hero h1 {
   transition: all 0.3s ease;
 }
 
-.nav-menu > li:hover .dropdown-menu {
+.nav-menu > li:hover .dropdown-menu,
+.nav-menu > li:focus-within .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -411,11 +413,14 @@ html[lang="en"] .hero h1 {
   background-color: var(--secondary-color);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  visibility: hidden;
+  transition: max-height 0.3s ease-out, visibility 0s linear 0.3s;
 }
 
 .mobile-submenu.active {
   max-height: 300px;
+  visibility: visible;
+  transition: max-height 0.3s ease-out, visibility 0s;
 }
 
 .mobile-submenu li {
@@ -870,5 +875,54 @@ html[lang="en"] .hero h1 {
   
   .container {
     padding: 0 0.75rem;
+  }
+}
+/* Header fit at laptop / tablet widths: tighter spacing, then the mobile menu below the
+   width where the full header no longer fits on one line (measured: zh 841px, en 1209px) */
+@media (max-width: 1400px) {
+  .nav-menu,
+  html[lang="en"] .nav-menu {
+    gap: 1.25rem;
+  }
+
+  .header-container {
+    gap: 1rem;
+  }
+
+  .header-utils,
+  html[lang="en"] .header-utils {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .header-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav-menu,
+  .header-utils {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1220px) {
+  html[lang="en"] .header-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  html[lang="en"] .nav-menu,
+  html[lang="en"] .header-utils {
+    display: none !important;
+  }
+
+  html[lang="en"] .mobile-menu-btn {
+    display: block !important;
   }
 }
