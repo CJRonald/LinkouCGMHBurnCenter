@@ -877,8 +877,21 @@ html[lang="en"] .hero h1 {
     padding: 0 0.75rem;
   }
 }
-/* Header fit at laptop / tablet widths: tighter spacing, then the mobile menu below the
-   width where the full header no longer fits on one line (measured: zh 841px, en 1209px) */
+/* Header fit at laptop / tablet widths: logo and buttons never shrink or wrap, spacing tightens
+   below 1400px, and the mobile menu takes over below the width where the whole header fits on
+   one line (measured in WebKit: zh 1096px, en 1248px; breakpoints leave ~40px for wider fonts) */
+@media (min-width: 769px) {
+  .logo,
+  .header-utils {
+    flex-shrink: 0;
+  }
+
+  .logo-text .main,
+  .header-utils a {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 1400px) {
   .nav-menu,
   html[lang="en"] .nav-menu {
@@ -895,7 +908,7 @@ html[lang="en"] .hero h1 {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1140px) {
   .header-container {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -915,7 +928,7 @@ html[lang="en"] .hero h1 {
   }
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1290px) {
   html[lang="en"] .header-container {
     padding-top: 1rem;
     padding-bottom: 1rem;
