@@ -901,6 +901,10 @@ html[lang="en"] .hero h1 {
     padding-bottom: 1rem;
   }
 
+  .logo-text {
+    line-height: 1.25;
+  }
+
   .nav-menu,
   .header-utils {
     display: none !important;
